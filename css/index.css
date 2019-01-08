@@ -1,7 +1,20 @@
+/* Desktop Screen */
+
 html {
-  margin: 0;
-  height: 100%;
+  font-size: 10px;
+  height: 100vh;
+  box-sizing: border-box;
   background: linear-gradient(47.77deg, #05070F 27.82%, #122837 56.13%, #567582 100%);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50rem;
 }
 
 /* Info */
@@ -9,40 +22,138 @@ html {
 .info {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  margin-top: 500px;
-  margin-left: 200px;
+  grid-gap: 2rem;
 }
 
-p, a {
+h1 {
   font-family: interstate, sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 28px;
-  margin: 0px;
+  font-size: 2.8rem;
   color: #FFFFFF;
 }
 
-/* menu */
+/* Enter Site */
 
-.menu {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  margin-left: 220px;
-  margin-top: 20px;
+  #enterSite {
+    margin-top: 5rem;
+    height: 4rem;
+  }
+
+/* Hide */
+
+#mobileMenu, #mobileArrow, .mobileContainer {
+  display: none;
 }
 
-a {
-  font-size: 20px;
-  margin-top: 10px;
+/* Tablet Screen */
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 9px;
+  }
+
+  .container {
+    margin-top: 55rem;
+  }
 }
 
-.line {
-  position: absolute;
-  width: 95px;
-  height: 2px;
-  left: 155px;
-  top: 720px;
-  background: linear-gradient(270deg, #154766 0%, #1A8BA4 52.49%, #6AEBF7 100%);
-  transform: matrix(0, 1, 1, 0, 0, 0);
+/* Mobile Screen */
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 8px;
+    height: auto;
+    min-width: 300px;
+  }
+
+  #mobileMenu {
+    position: absolute;
+    display: block;
+    width: 10%;
+    height: auto;
+    right: 4rem;
+    top: 3rem;
+  }
+
+  #mobileArrow {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10rem;
+    width: 10%;
+  }
+
+  .mobileContainer {
+    display: block;
+    top: 55.5rem;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .work {
+    width: 80%;
+    margin: 3rem auto;
+  }
+
+  /* Header */
+
+  #blueLine {
+    position: absolute;
+    width: 2rem;
+    height: 2px;
+    left: 0;
+    margin-top: 4.5rem;
+    background: linear-gradient(270deg, #154766 0%, #1A8BA4 52.49%, #6AEBF7 100%);
+  }
+
+  .work > h1 {
+    padding: 3rem 0;
+  }
+
+  /* Case Study */
+
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-row-gap: 2rem;
+    margin-bottom: 4.5rem;
+  }
+
+  img {
+    grid-column: span 2;
+    max-width: 100%;
+    height: auto;
+  }
+
+  input {
+    justify-self: end;
+    height: 3rem;
+  }
+
+  /* Footer */
+
+  footer {
+    width: 100%;
+    height: 9rem;
+    background: #122837;
+    display: grid;
+    grid-row-gap: 1rem;
+    justify-content: end;
+    padding-right: 4rem;
+  }
+
+  p {
+    align-self: end;
+    font-family: montserrat, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+  }
+
+  /* Hide */
+
+  #enterSite {
+    display: none;
+  }
 }

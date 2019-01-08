@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- Adobe Fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
@@ -20,17 +21,19 @@
   <!-- Case Study -->
   <main class="casestudy">
     <div class="centerGrid" id="blueLine"></div>
+    <!-- Mobile Menu Icon -->
+    <input type="image" src="images/11 - Icons_Images/menu_closed_black.png" class="button" id="mobileMenu" type="button" onclick="window.location.href = 'menu';">
     <!-- Project Name -->
     <header class="centerGrid" id="title">Workspace</header>
       <!-- Hero -->
       <section class="centerGrid">
-        <h1>
-          Rethinking cloud storage to rival the likes of Google Drive and iCloud
+        <h1 id="titleInfo">
+          Rethinking cloud storage to rival Google Drive and iCloud
         </h1>
         <!-- Button for Prototype -->
         <input type="image" src="images/11 - Icons_Images/Prototype_Button.png" class="button" id="protoButton" type="button" onclick="window.location.href = 'https://invis.io/BANT4GQ7T53';">
         <!-- Hero Image -->
-        <image src="images/01 - Header_Images/Header_Workspace.png"></image>
+        <img src="images/01 - Header_Images/Header_Workspace.png">
         <!-- Project Details -->
         <div class="projectDetails">
           <div class="client">
@@ -169,11 +172,11 @@
           <!-- Features -->
           <div class="features">
             <!-- Smart Organzation Feature -->
-            <img src="images/05 - Innovation_Images/Smart Organization Icon.png" alt="smart organization icon" class="smartOrgIcon">
+            <img src="images/05 - Innovation_Images/Smart Organization Icon.png" alt="smart organization icon" class="featureIcon" id="smartOrgIcon">
             <p id="smartTitle">Smart Organization</p>
             <p id="smartBody">An account option requiring users to create personalized folder structures and follow a template when uploading and creating files to ensure they are named, tagged and placed into folders right away.</p>
             <!-- Unsorted File Feature -->
-            <img src="images/05 - Innovation_Images/Unsorted Icon.png" alt="unsorted icon" class="unsortedIcon">
+            <img src="images/05 - Innovation_Images/Unsorted Icon.png" alt="unsorted icon" class="featureIcon" id="unsortedIcon">
             <p id="unsortedTitle">Unsorted Files</p>
             <p id="unsortedBody">A section for files that are unnamed and lacking a folder, while the main dashboard only displays named files placed into folders.</p>
           </div>
@@ -215,13 +218,13 @@
       </section>
       <!-- Branding -->
       <section class="fullGrid">
-        <div class="brandingSmall">
+        <div class="designSmall">
           <h2>Branding</h2>
           <p>
             Simply put, users wanted a way to organize their files better. But what was the underlying desire of wanting to be organized? Does it generate a feeling, inspire a mindset, let them breathe? And if I could pinpoint what it was, could I encapsulate and communicate those abstract elements into something concrete, into... a brand?
           </p>
         </div>
-        <div class="brandingBig">
+        <div class="designBig">
         <!-- Images -->
         <img src="images/08 - Branding_Images/Moodboard.png" alt="moodboard" class="moodboard">
         <div class="brandingDetails">
@@ -235,14 +238,14 @@
       </section>
       <!-- Hi-Fi Mockup and Preference Tests -->
       <section class="fullGrid">
-        <div class="brandingSmall">
+        <div class="designSmall">
           <h2>Hi-Fi Mockup and Preference Tests</h2>
           <p>
             With a revamped wireframe and clean brand guide in hand, I created the first high-fidelity mockup. To abstain from subjective bias I redesigned a few screens and sent them to users for preference testing.
           </p>
         </div>
         <!-- Images -->
-        <div class="brandingBig">
+        <div class="designBig">
           <div class="prefTest">
             <img src="images/09 - Preference Testing_Images/Home_01.png" alt="home preference test" id="prefHome1">
             <img src="images/09 - Preference Testing_Images/Home_02.png" alt="home preference test" id="prefHome2">
@@ -251,8 +254,8 @@
             <img src="images/09 - Preference Testing_Images/feedbackIcon_10.jpg" alt="prefIcon10" class="prefIcons">
           </div>
         </div>
-        <quote class="brandingSmall">“Uploading is an important and frequently used button that got lost in the other design; it is easy to find here.”</quote>
-        <div class="brandingBig">
+        <quote class="designSmall">“Uploading is an important and frequently used button that got lost in the other design; it is easy to find here.”</quote>
+        <div class="designBig">
           <div class="prefTest">
             <img src="images/09 - Preference Testing_Images/Share_01.png" alt="share preference test" id="prefShare1">
             <img src="images/09 - Preference Testing_Images/Share_02.png" alt="share preference test" id="prefShare2">
@@ -261,15 +264,16 @@
             <img src="images/09 - Preference Testing_Images/feedbackIcon_11.jpg" alt="prefIcon11" class="prefIcons">
           </div>
         </div>
-        <quote class="brandingSmall">“I think it puts the importance of this sharing feature front and center, the other feels I can just push it to the side.”</quote>
+        <quote class="designSmall">“I think it puts the importance of this sharing feature front and center, the other feels I can just push it to the side.”</quote>
       </section>
       <!-- Final Prototype -->
       <section class="centerGrid">
           <h2>Final Prototype</h2>
           <p>
             I implemented the preferred screens and had the final prototype go through a final round of usability testing. To my delight, users loved the branding, remarking it was “welcoming and peaceful” and navigated through the app with ease. An additional surprise came when users noticed the Unsorted Files feature (which went unnoticed during the wireframe testing). Ecstatic with the feature, many complained that their current file dashboard was a chaotic mess of named and unnamed files that made tracking down a file a nightmare.
-
-            1 - 0, Workspace!
+            <br>
+            <br>
+            <strong>1 - 0, Workspace!</strong>
           </p>
           <!-- video -->
       </section>
