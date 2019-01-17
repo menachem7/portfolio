@@ -6,50 +6,45 @@
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/index.css">
+  <!-- Javascript -->
+  <script type="text/javascript" src="js/script.js"></script>
   <!-- Adobe Fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
   <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
   <title>Menachem Polonsky</title>
 </head>
   <body>
+    <!-- Welcome -->
     <div class="container">
-      <!-- Mobile Menu -->
-      <input type="image" src="images/11 - Icons_Images/menu_closed_white.png" id="mobileMenu" type="button" onclick="window.location.href = 'https://www.google.com';">
-      <!-- Info -->
-      <main class="info">
-        <h1>Menachem Polonsky</h1>
-        <h1>UX Designer</h1>
-        <h1>Living in New York</h1>
-        </main>
-      <!-- Enter Site -->
-      <input type="image" src="images/11 - Icons_Images/EnterSite_white.png" id="enterSite" type="button" onclick="window.location.href = 'https://www.google.com';">
-      <!-- Mobile Arrow -->
-      <img src="images/11 - Icons_Images/Arrow_Mobile.png" id="mobileArrow">
+      <img src="images/00 - Logo/Logo.png" id="mainLogo">
+      <h1>Hi, my name is Menachem Polonsky.</h1>
+      <a href="work.html">
+        <p>Please enter my site</p>
+      </a>
+      <a id="enterLine"></a>
     </div>
-    <div class="mobileContainer">
-      <section class="work">
-        <!-- Work -->
-        <div id="blueLine"></div>
-        <h1>Work</h1>
-        <!-- Workspace Case Study -->
-        <article>
-          <img class="casestudyImage" src="images/01 - Header_Images/Header_Workspace.png">
-          <h1>Workspace</h1>
-          <input type="image" src="images/11 - Icons_Images/CaseStudy_Button.png" id="casestudyButton" type="button" onclick="window.location.href = 'https://www.google.com';">
-        </article>
-        <!-- Craigslist Case Study -->
-        <article>
-          <img class="casestudyImage" src="images/12 - Next Project_Images/Craigslist_Project.jpg">
-          <h1>Craigslist</h1>
-          <input type="image" src="images/11 - Icons_Images/CaseStudy_Button.png" id="casestudyButton" type="button" onclick="window.location.href = 'https://www.google.com';">
-        </article>
-        <!-- Contact Me  -->
-      </section>
-      <footer>
-        <p>Like what you see?</p>
-        <input type="image" src="images/11 - Icons_Images/ContactMe_White_Mobile.png" id="contactmeButton" type="button" onclick="window.location.href = 'https://www.google.com';">
-      </footer>
+
+    <!-- Mobile Menu -->
+    <input id="closedMenu" type="image" src="images/11 - Icons_Images/menu_closed_white.png"  type="button" onclick="openNav()">
+
+    <!-- Menu Overlay -->
+    <div id="menuOverlay" class="overlay">
+
+     <!-- Button to close the overlay navigation -->
+     <a href="javascript:void(0)" class="closeMenu" onclick="closeNav()">
+       <img src="images/11 - Icons_Images/menu_open.png">
+     </a>
+
+     <!-- Overlay content -->
+     <div class="overlay-content">
+       <a href="index.html" id="active">Home</a>
+       <a href="about.html">About</a>
+       <a href="work.html">Work</a>
+       <a href="mailto:m@mbenleonardo.com" id="overlayContact">Contact</a>
+     </div>
+
     </div>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132132938-1"></script>
     <script>

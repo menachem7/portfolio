@@ -82,38 +82,32 @@ img {
 
 /* Navigation Bar */
 
-
-#backBar {
-  position: absolute;
-  width: 104px;
-  height: 2px;
-  left: 5%;
-  top: 40px;
-  background: linear-gradient(270deg, #154766 0%, #1A8BA4 52.49%, #6AEBF7 100%);
+nav.border {
+  margin: 3% 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-#return {
-  position: absolute;
-  left: 14%;
-  top: 30px;
+#ReturnToWork{
+  width: 9rem;
+  justify-self: start;
 }
 
-#name {
-  position: absolute;
-  left: -4%;
-  top: 160px;
-  transform: rotate(-90deg);
+#logo {
+  width: 6.6rem;
+  justify-self: center;
 }
 
-#mobileMenu {
-  display: none;
+#closedMenu {
+  height: 2.3rem;
+  justify-self: end;
 }
 
 /* Case Study */
 
 .casestudy {
   background: #FFFFFF;
-  margin: 5% 5%;
+  margin: 2% 5% 5% 5%;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6);
@@ -381,18 +375,6 @@ img {
 
   /* Navigation Menu */
 
-  #mobileMenu {
-    display: block;
-    position: absolute;
-    width: 5rem;
-    right: 7%;
-    top: 7%;
-  }
-
-  .border, #blueLine {
-    display: none;
-  }
-
   /* Competitive Analysis & User Research */
   .logos {
     grid-template-columns: repeat(4, 1fr);
@@ -434,9 +416,87 @@ img {
   }
 }
 
+/* Menu Overlay (background) */
+.overlay {
+ height: 0;
+ width: 100%;
+ position: fixed;
+ z-index: 1;
+ left: 0;
+ top: 0;
+ background-color: #122837;
+ overflow-x: hidden; /* Disable horizontal scroll */
+ transition: 0.3s;
+}
+
+/* Overlay Content */
+.overlay-content {
+   position: relative;
+   top: 25rem;
+   width: 100%;
+   text-align: center;
+   margin-top: 1rem;
+  }
+
+/* Navigation Links */
+.overlay a {
+  font-family: interstate, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 4.8rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: .2rem;
+  margin-bottom: 5rem;
+  display: block; /* Display block instead of inline */
+  transition: 0.2s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.overlay-content a {
+  width: 20%;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+.overlay-content a:hover {
+   border-bottom: solid #567582;
+  padding-bottom: 2rem;
+}
+
+
+.overlay-content a:focus, .overlay-content a:active, #active {
+  border-bottom: solid #6AEBF7;
+  padding-bottom: 2rem;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closeMenu {
+ position: absolute;
+ top: 3rem;
+ right: 5rem;
+ max-width: 5rem;
+}
+
+.overlay #overlayContact {
+  width: 20rem;
+  margin: auto;
+  margin-top: 10rem;
+  padding: 2rem;
+  font-size: 3.2rem;
+  border: thin solid #FFFFFF;
+  border-radius: 100rem;
+}
+
+.overlay #overlayContact:hover {
+  color: #567582;
+  border: thin solid #567582;
+}
+
 /* Media Screen for Mobile */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
 
   html {
     font-size: 7px;
@@ -456,16 +516,11 @@ img {
 
   /* Navigation Menu */
 
-  #mobileMenu {
-    position: absolute;
-    display: block;
-    width: 10%;
-    height: auto;
-    right: 5rem;
-    top: 4rem;
+  nav.border {
+    margin: 10% 5%;
   }
 
-  .border, #blueLine {
+  #blueLine {
     display: none;
   }
 
@@ -506,5 +561,17 @@ img {
     width: 45%;
     margin-top: 3rem;
     float: left;
+  }
+
+  /* overlay menu */
+  .overlay-content a {
+    font-size: 3.2rem;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 5rem;
+  }
+
+  .overlay #overlayContact {
+    font-size: 2.4rem;
   }
 }

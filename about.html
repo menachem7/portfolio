@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/about.css">
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
+    <title>Menachem Polonsky | About</title>
+  </head>
+  <body>
+    <div class="aboutmeContainer">
+      <!-- Logo and Menu -->
+      <nav class="top">
+        <!-- Logo -->
+        <input type="image" src="images/00 - Logo/Logo.png" class="button" id="logo" type="button" onclick="window.location.href = 'index.html';">
+        <!-- Menu -->
+        <input type="image" src="images/11 - Icons_Images/menu_closed_white.png" class="button" id="closedMenu" type="button" onclick="openNav()">
+      </nav>
+      <!-- About Me Section -->
+      <section class="aboutmeSection">
+
+        <!-- Menu Button: Work Section -->
+        <input type="image" src="images/11 - Icons_Images/work-section-inactive.png" id="workButton" type="button" onclick="window.location.href = 'work.html';">
+
+        <!-- Menu Button: About Section -->
+        <input type="image" src="images/11 - Icons_Images/about_section_active.png" id="aboutButton" type="button" onclick="window.location.href = 'about.html';">
+
+        <!--  Menu Button: Contact -->
+        <input type="image" src="images/11 - Icons_Images/ContactButton.png" id="contactButton" type="button" onclick="window.location.href = 'https://www.google.com';">
+
+        <!-- About Me Image -->
+        <img id="selfPortrait" src="images/13 - About/self-portrait.png">
+
+        <!-- About Me Essay -->
+        <p id="essay">
+          <strong>Hey - My name is Menachem.</strong>
+          <br><br>
+          I’m a dreamer and a child at heart always searching for those things that make me smile and laugh, even if I have no clue why. I live in New York (feel proud to say that). I’m a UX Designer by trade and growing human for life. When I need my space, I find happiness in discovering cool coffee shops, turning on some music and dancing (Chris Brown style), and taking time to just … be.
+          <br><br>
+          <strong>How I would explain my love for design:</strong>
+          <br><br>
+          My design career began among wizards and dragons.
+          10 year-old me, lying on that beaten up brown leather couch in my living room, staying up till all hours of the night reading fantasy books. It all started there. Reading was like jumping off a cliff into an abyss of fluid motion, the constraints only limited by my imagination and the book I held. I wouldn't merely imagine the stories or characters in my head, I would become them. The stories transformed my reality, not because dragons and wizards suddenly appeared on my front door step, but because the magic came to life inside of me. Mere pages and suddenly my world transformed. The adventure began. I was no longer menachem who lived on planet earth.
+          <br><br>
+          I was <strong>Menachem</strong> who <i>lived</i> on Planet Earth.
+          <br><br>
+          Design is for me now what books were for me at 10… with some added superpowers. Design empowers me to imagine the world I want to live in and more than that, create it. It allows me to feel the magic. Jump into the abyss. Make life an adventure.
+          <br><br>
+          <strong>Be Menachem.</strong>
+        </p>
+
+        <!-- About Me Buttons -->
+        <div class="aboutmeButtons">
+          <!-- Linkedin -->
+          <input type="image" src="images/11 - Icons_Images/LinkedIn.png" class="aboutmeButton" type="button" onclick="window.location.href = 'https://www.google.com';">
+          <!-- Resume -->
+          <input type="image" src="images/11 - Icons_Images/Resume.png" class="aboutmeButton" type="button" onclick="window.location.href = 'https://www.google.com';">
+          <!-- GitHub -->
+          <input type="image" src="images/11 - Icons_Images/Github.png" class="aboutmeButton" type="button" onclick="window.location.href = 'https://www.google.com';">
+          <!-- Instagram -->
+          <input type="image" src="images/11 - Icons_Images/Instagram.png" class="aboutmeButton" type="button" onclick="window.location.href = 'https://www.google.com';">
+        </div>
+      </section>
+    </div>
+    <!-- Menu Overlay -->
+    <div id="menuOverlay" class="overlay">
+
+     <!-- Button to close the overlay navigation -->
+     <a href="javascript:void(0)" class="closeMenu" onclick="closeNav()">
+       <img src="images/11 - Icons_Images/menu_open.png">
+     </a>
+
+     <!-- Overlay content -->
+     <div class="overlay-content">
+       <a href="index.html">Home</a>
+       <a href="about.html" id="active">About</a>
+       <a href="work.html">Work</a>
+       <a href="mailto:m@mbenleonardo.com" id="overlayContact">Contact</a>
+     </div>
+
+    </div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132132938-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-132132938-1');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,302 @@
+/* Foundation */
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  box-sizing: border-box;
+  background: linear-gradient(47.77deg, #05070F 27.82%, #122837 56.13%, #567582 100%);
+}
+
+.aboutmeContainer {
+  width: 100%;
+  margin: 4rem 0;
+}
+
+/* Typography */
+
+h1 {
+  font-family: interstate, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.4rem;
+  color: #FFFFFF;
+}
+
+p {
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  letter-spacing: 1%;
+  line-height: 140%;
+}
+
+strong {
+  font-weight: 600;
+}
+
+i {
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Navigation */
+
+nav.top {
+  margin: 0;
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: column;
+}
+
+#logo {
+  grid-column: 2/3;
+  width: 6.6rem;
+  justify-self: center;
+}
+
+#closedMenu {
+  grid-column: 3/4;
+  height: 2.3rem;
+  justify-self: end;
+  margin-right: 5rem;
+}
+
+/* Case Study Section and Side Menus */
+
+.aboutmeSection {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 56rem 1fr 1fr;
+  grid-template-areas:
+  "Work Portrait Portrait About"
+  ". Essay Buttons Contact";
+  grid-row-gap: 5rem;
+  grid-column-gap: 2rem;
+  align-items: center;
+}
+
+#selfPortrait {
+  grid-area: Portrait;
+  max-width: 100%;
+  justify-self: center;
+}
+
+#essay {
+  grid-area: Essay;
+}
+
+.aboutmeButtons {
+  grid-area: Buttons;
+  align-self: start;
+  display: grid;
+  grid-gap: 2.4rem;
+}
+
+/* Buttons */
+
+#workButton, #aboutButton, #contactButton {
+  height: 3rem;
+}
+
+#workButton {
+  grid-area: Work;
+}
+
+#aboutButton {
+  grid-area: About;
+  justify-self: end;
+}
+
+#contactButton {
+  grid-area: Contact;
+  align-self: start;
+  justify-self: end;
+  margin-right: 2rem;
+}
+
+.aboutmeButton {
+  max-width: 13.6rem;
+  justify-self: end;
+}
+
+/* Menu Overlay (background) */
+.overlay {
+ height: 0;
+ width: 100%;
+ position: fixed;
+ z-index: 1;
+ left: 0;
+ top: 0;
+ background-color: #122837;
+ overflow-x: hidden; /* Disable horizontal scroll */
+ transition: 0.3s;
+}
+
+/* Overlay Content */
+.overlay-content {
+   position: relative;
+   top: 25rem;
+   width: 100%;
+   text-align: center;
+   margin-top: 1rem;
+  }
+
+/* Navigation Links */
+.overlay a {
+  font-family: interstate, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 4.8rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: .2rem;
+  margin-bottom: 5rem;
+  display: block; /* Display block instead of inline */
+  transition: 0.2s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.overlay-content a {
+  width: 20%;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+.overlay-content a:hover {
+   border-bottom: solid #567582;
+  padding-bottom: 2rem;
+}
+
+
+.overlay-content a:focus, .overlay-content a:active, #active {
+  border-bottom: solid #6AEBF7;
+  padding-bottom: 2rem;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closeMenu {
+ position: absolute;
+ top: 3rem;
+ right: 5rem;
+ max-width: 5rem;
+}
+
+.overlay #overlayContact {
+  width: 20rem;
+  margin: auto;
+  margin-top: 10rem;
+  padding: 2rem;
+  font-size: 3.2rem;
+  border: thin solid #FFFFFF;
+  border-radius: 100rem;
+}
+
+.overlay #overlayContact:hover {
+  color: #567582;
+  border: thin solid #567582;
+}
+
+/* Screens */
+
+@media screen and (max-width: 1150px) {
+  html {
+    font-size: 9px;
+  }
+  .casestudyScroller {
+    display: none;
+  }
+  .mobileScroll {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  /* General */
+
+  .aboutmeContainer {
+    min-width: 300px;
+    margin: 4rem 0;
+  }
+
+  /* Menu Button */
+
+  #closedMenu {
+    margin-right: 2rem;
+  }
+
+  /* Navigation Buttons */
+  #workButton, #aboutButton, #contactButton {
+    display: none;
+  }
+
+  /* About Me Section */
+  .aboutmeSection {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+    "Portrait"
+    "Buttons"
+    "Essay";
+    grid-row-gap: 3rem;
+    grid-column-gap: 2rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  #selfPortrait {
+    grid-area: Portrait;
+    grid-column: 2/3;
+    max-width: 100%;
+    justify-self: center;
+  }
+
+  #essay {
+    grid-area: Essay;
+    grid-column: 2/3;
+  }
+
+  .aboutmeButtons {
+    grid-area: Buttons;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2.4rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    html {
+      font-size: 7px;
+    }
+
+    /* overlay menu */
+    .overlay-content a {
+      font-size: 3.2rem;
+      width: 30%;
+      margin: auto;
+      margin-bottom: 5rem;
+    }
+
+    .overlay #overlayContact {
+      font-size: 2.4rem;
+    }
+}

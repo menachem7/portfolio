@@ -2,7 +2,11 @@
 
 html {
   font-size: 10px;
+}
+
+body {
   height: 100vh;
+  overflow-x: hidden;
   box-sizing: border-box;
   background: linear-gradient(47.77deg, #05070F 27.82%, #122837 56.13%, #567582 100%);
 }
@@ -12,39 +16,136 @@ html {
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 50rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 10rem;
+}
+
+/* Hide */
+
+#closedMenu {
+  display: none;
 }
 
 /* Info */
 
-.info {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 2rem;
+#mainLogo  {
+  justify-self: center;
+  width: 20rem;
 }
 
 h1 {
   font-family: interstate, sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
+  color: #FFFFFF;
+}
+
+.container a {
+  text-decoration: none;
+  justify-self: center;
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.2rem;
   color: #FFFFFF;
 }
 
 /* Enter Site */
 
-  #enterSite {
-    margin-top: 5rem;
-    height: 4rem;
+#enterLine {
+  width: 9rem;
+  height: .2rem;
+  margin: auto;
+  margin-top: -4rem;
+  transform: rotate(90deg);
+  background: linear-gradient(270deg, #154766 0%, #1A8BA4 52.49%, #6AEBF7 100%);
+}
+
+/* Menu Overlay (background) */
+.overlay {
+   height: 0;
+   width: 100%;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   background-color: #122837;
+   overflow-x: hidden; /* Disable horizontal scroll */
+   transition: 0.3s;
+}
+
+/* Overlay Content */
+.overlay-content {
+   position: relative;
+   top: 25rem;
+   width: 100%;
+   text-align: center;
+   margin-top: 1rem;
   }
 
-/* Hide */
-
-#mobileMenu, #mobileArrow, .mobileContainer {
-  display: none;
+/* Navigation Links */
+.overlay a {
+  font-family: interstate, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 4.8rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: .2rem;
+  margin-bottom: 5rem;
+  display: block; /* Display block instead of inline */
+  transition: 0.2s; /* Transition effects on hover (color) */
 }
+
+/* When you mouse over the navigation links, change their color */
+
+.overlay-content a {
+  width: 20%;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+.overlay-content a:hover {
+   border-bottom: solid #567582;
+  padding-bottom: 2rem;
+}
+
+
+.overlay-content a:focus, .overlay-content a:active, #active {
+  border-bottom: solid #6AEBF7;
+  padding-bottom: 2rem;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closeMenu {
+ position: absolute;
+ top: 3rem;
+ right: 5rem;
+ max-width: 5rem;
+}
+
+.overlay #overlayContact {
+  width: 20rem;
+  margin: auto;
+  margin-top: 10rem;
+  padding: 2rem;
+  font-size: 3.2rem;
+  border: thin solid #FFFFFF;
+  border-radius: 100rem;
+}
+
+.overlay #overlayContact:hover {
+  color: #567582;
+  border: thin solid #567582;
+}
+
 
 /* Tablet Screen */
 
@@ -52,108 +153,54 @@ h1 {
   html {
     font-size: 9px;
   }
-
-  .container {
-    margin-top: 55rem;
-  }
 }
 
 /* Mobile Screen */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   html {
-    font-size: 8px;
-    height: auto;
-    min-width: 300px;
+    font-size: 7px;
+    min-width: 350px;
   }
 
-  #mobileMenu {
+  #mainLogo {
+    margin-top: 4rem;
+  }
+
+  #enterLine {
+    width: 9rem;
+    height: .2rem;
+    margin: 0 auto;
+    margin-top: -4rem;
+    bottom: 0;
+  }
+
+  .container > * {
+    grid-column: span 3;
+    text-align: center;
+  }
+
+  .container > p {
+    display: none;
+  }
+
+  #closedMenu {
     position: absolute;
     display: block;
     width: 10%;
-    height: auto;
     right: 4rem;
     top: 3rem;
   }
 
-  #mobileArrow {
-    display: block;
-    margin: 0 auto;
-    margin-top: 10rem;
-    width: 10%;
+  /* overlay menu */
+  .overlay-content a {
+    font-size: 3.2rem;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 5rem;
   }
 
-  .mobileContainer {
-    display: block;
-    top: 55.5rem;
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  .work {
-    width: 80%;
-    margin: 3rem auto;
-  }
-
-  /* Header */
-
-  #blueLine {
-    position: absolute;
-    width: 2rem;
-    height: 2px;
-    left: 0;
-    margin-top: 4.5rem;
-    background: linear-gradient(270deg, #154766 0%, #1A8BA4 52.49%, #6AEBF7 100%);
-  }
-
-  .work > h1 {
-    padding: 3rem 0;
-  }
-
-  /* Case Study */
-
-  article {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto;
-    grid-row-gap: 2rem;
-    margin-bottom: 4.5rem;
-  }
-
-  img {
-    grid-column: span 2;
-    max-width: 100%;
-    height: auto;
-  }
-
-  input {
-    justify-self: end;
-    height: 3rem;
-  }
-
-  /* Footer */
-
-  footer {
-    width: 100%;
-    height: 9rem;
-    background: #122837;
-    display: grid;
-    grid-row-gap: 1rem;
-    justify-content: end;
-    padding-right: 4rem;
-  }
-
-  p {
-    align-self: end;
-    font-family: montserrat, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1.4rem;
-    color: #FFFFFF;
-  }
-
-  /* Hide */
-
-  #enterSite {
-    display: none;
+  .overlay #overlayContact {
+    font-size: 2.4rem;
   }
 }

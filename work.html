@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/work.css">
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
+    <title>Menachem Polonsky | Work</title>
+  </head>
+  <body>
+
+    <!-- Desktop Menu -->
+    <div class="container">
+      <!-- Logo and Menu -->
+      <nav class="top">
+        <!-- Logo -->
+        <input type="image" src="images/00 - Logo/Logo.png" class="button" id="logo" type="button" onclick="window.location.href = 'index.html';">
+        <!-- Menu -->
+        <input type="image" src="images/11 - Icons_Images/menu_closed_white.png" class="button" id="closedMenu" type="button" onclick="openNav()">
+      </nav>
+      <!-- Case Studies -->
+      <section class="casestudies">
+
+        <!-- Work Section -->
+        <input type="image" src="images/11 - Icons_Images/work_section_active.png" id="workButton" type="button" onclick="window.location.href = 'work.html';">
+
+        <!-- Case Study Scroller -->
+        <div class="casestudyScroller">
+          <p>1</p>
+          <p>2</p>
+          <input type="image" src="images/11 - Icons_Images/ArrowUp.png" id="scrollUp" type="button" onclick="window.location.href = 'https://www.google.com';">
+          <p>3</p>
+          <input type="image" src="images/11 - Icons_Images/ArrowDown.png" id="scrollDown" type="button" onclick="window.location.href = 'https://www.google.com';">
+          <p>4</p>
+          <p>5</p>
+        </div>
+
+        <!-- Mobile Case Study Scroll Left -->
+        <input type="image" src="images/11 - Icons_Images/ArrowUp.png" class="mobileScroll" id="mobile_scroll_left" type="button" onclick="window.location.href = 'https://www.google.com';">
+
+
+        <!-- Case Study -->
+        <article class="casestudy">
+          <img class="casestudyImage" src="images/01 - Header_Images/Header_Workspace.png">
+        </article>
+
+        <!-- Case Study Title and Description -->
+        <article class="casestudy">
+          <h1>Workspace</h1>
+          <p>UX / UI Design</p>
+        </article>
+
+        <!-- Mobile Case Study Scroll Right -->
+        <input type="image" src="images/11 - Icons_Images/ArrowUp.png" class="mobileScroll" id="mobile_scroll_right" type="button" onclick="window.location.href = 'https://www.google.com';">
+
+        <!-- About Section -->
+        <input type="image" src="images/11 - Icons_Images/about_section_inactive.png" id="aboutButton" type="button" onclick="window.location.href = 'about.html';">
+
+        <!-- Contact -->
+        <input type="image" src="images/11 - Icons_Images/ContactButton.png" id="contactButton" type="button" onclick="window.location.href = 'https://www.google.com';">
+
+      </section>
+
+      <!-- Mobile Menu -->
+      <div class="mobileContainer">
+        <section class="work">
+          <!-- Work -->
+          <div id="blueLine"></div>
+          <h1>Work</h1>
+          <!-- Workspace Case Study -->
+          <article>
+            <img class="casestudyImage" src="images/01 - Header_Images/Header_Workspace.png">
+            <div class="casestudyInfo">
+              <h1>Workspace</h1>
+              <br>
+              <p>UX / UI Design</p>
+            </div>
+            <input type="image" src="images/11 - Icons_Images/CaseStudy_Button.png" id="casestudyButton" type="button" onclick="window.location.href = 'project.html';">
+          </article>
+          <!-- Craigslist Case Study -->
+          <article>
+            <img class="casestudyImage" src="images/12 - Next Project_Images/Craigslist_Project.jpg">
+            <div class="casestudyInfo">
+              <h1>Craigslist</h1>
+              <br>
+              <p>Brand Redesign</p>
+            </div>
+            <input type="image" src="images/11 - Icons_Images/CaseStudy_Button.png" id="casestudyButton" type="button" onclick="window.location.href = 'project.html';">
+          </article>
+        </section>
+        <!-- Footer -->
+        <!-- <footer>
+          <input type="image" src="images/11 - Icons_Images/ContactButton.png" id="contactmeButton" type="button" onclick="window.location.href = 'https://www.google.com';">
+        </footer> -->
+      </div>
+    </div>
+
+
+
+    <!-- Menu Overlay -->
+    <div id="menuOverlay" class="overlay">
+
+     <!-- Button to close the overlay navigation -->
+     <a href="javascript:void(0)" class="closeMenu" onclick="closeNav()">
+       <img src="images/11 - Icons_Images/menu_open.png">
+     </a>
+
+     <!-- Overlay content -->
+     <div class="overlay-content">
+       <a href="index.html">Home</a>
+       <a href="about.html">About</a>
+       <a href="work.html" id="active">Work</a>
+       <a href="mailto:m@mbenleonardo.com" id="overlayContact">Contact</a>
+     </div>
+
+    </div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132132938-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-132132938-1');
+    </script>
+  </body>
+</html>

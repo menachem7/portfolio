@@ -6,6 +6,8 @@
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Javascript -->
+  <script type="text/javascript" src="js/script.js"></script>
   <!-- Adobe Fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
   <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
@@ -14,15 +16,16 @@
 <body>
   <!-- Nav -->
   <nav class="border">
-    <div id="backBar"></div>
-    <h1 id="return">Return to Work</h1>
-    <h1 id="name">Menachem Polonsky</h1>
+    <!-- Return to Work -->
+    <input type="image" src="images/11 - Icons_Images/ReturnToWork.png" class="button" id="ReturnToWork" type="button" onclick="window.location.href = 'index.html';">
+    <!-- Logo -->
+    <input type="image" src="images/00 - Logo/Logo.png" class="button" id="logo" type="button" onclick="window.location.href = 'index.html';">
+    <!-- Menu -->
+    <input type="image" src="images/11 - Icons_Images/menu_closed_white.png" class="button" id="closedMenu" type="button" onclick="openNav()">
   </nav>
   <!-- Case Study -->
   <main class="casestudy">
     <div class="centerGrid" id="blueLine"></div>
-    <!-- Mobile Menu Icon -->
-    <input type="image" src="images/11 - Icons_Images/menu_closed_black.png" class="button" id="mobileMenu" type="button" onclick="window.location.href = 'menu';">
     <!-- Project Name -->
     <header class="centerGrid" id="title">Workspace</header>
       <!-- Hero -->
@@ -297,7 +300,25 @@
         </div> -->
         </div>
     </footer>
-    </main>
+      </main>
+
+    <!-- Menu Overlay -->
+    <div id="menuOverlay" class="overlay">
+
+     <!-- Button to close the overlay navigation -->
+     <a href="javascript:void(0)" class="closeMenu" onclick="closeNav()">
+       <img src="images/11 - Icons_Images/menu_open.png">
+     </a>
+
+     <!-- Overlay content -->
+     <div class="overlay-content">
+       <a href="index.html">Home</a>
+       <a href="about.html">About</a>
+       <a href="work.html">Work</a>
+       <a href="mailto:m@mbenleonardo.com" id="overlayContact">Contact</a>
+     </div>
+
+    </div>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132132938-1"></script>
     <script>
