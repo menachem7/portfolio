@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  height: 100%;
   box-sizing: border-box;
   background: linear-gradient(47.77deg, #05070F 27.82%, #122837 56.13%, #567582 100%);
 }
@@ -84,7 +85,7 @@ nav.navTop {
 nav.navSides {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 42%;
   left: 0;
   z-index: 1;
   display: grid;
@@ -93,11 +94,6 @@ nav.navSides {
 
 .navSides a {
   text-decoration: none;
-}
-
-#workButton, #aboutButton {
-  position: fixed;
-  top: 42%;
 }
 
 #workButton h1 {
@@ -308,12 +304,6 @@ nav.navSides {
 
 @media screen and (max-width: 800px) {
 
-  /* General */
-
-  body, nav {
-    min-width: 300px;
-  }
-
   /* Menu Button */
 
   #closedMenu {
@@ -327,7 +317,7 @@ nav.navSides {
 
   /* About Me Section */
   .aboutSection {
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
     grid-template-areas:
     ". Portrait ."
     ". Buttons ."
@@ -338,7 +328,7 @@ nav.navSides {
     justify-items: center;
   }
 
-  .abooutmeSection > * {
+  .aboutSection > * {
     grid-column: 2/3;
   }
 
@@ -364,28 +354,32 @@ nav.navSides {
   }
 }
 
-  @media screen and (max-width: 600px) {
-    html {
-      font-size: 7px;
-    }
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 7px;
+  }
 
-    .aboutButtons {
-      grid-area: Buttons;
-      grid-column: 2/3;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 2.4rem;
-    }
+  .aboutSection {
+    grid-template-columns: 1fr 80% 1fr;
+  }
 
-    /* overlay menu */
-    .overlay-content a {
-      font-size: 3.2rem;
-      width: 30%;
-      margin: auto;
-      margin-bottom: 5rem;
-    }
+  .aboutButtons {
+    grid-area: Buttons;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2.4rem;
+  }
 
-    .overlay #overlayContact {
-      font-size: 2.4rem;
-    }
+  /* overlay menu */
+  .overlay-content a {
+    font-size: 3.2rem;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 5rem;
+  }
+
+  .overlay #overlayContact {
+    font-size: 2.4rem;
+  }
 }

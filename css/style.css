@@ -170,7 +170,7 @@ nav.navTop {
 .casestudy {
   background: #FFFFFF;
   margin: 0 5% 5% 5%;
-  padding-top: 8%;
+  padding: 8% 0;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6);
@@ -725,7 +725,15 @@ top: 3rem;
     grid-template-columns: 1fr 70% 1fr;
   }
 
-  /* Navigation Menu */
+  /* Previous and Next Buttons */
+  .prev, .next {
+    margin-left: -10rem;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    margin-right: -10rem;
+  }
 
   /* Competitive Analysis & User Research */
   .logos {
@@ -777,19 +785,35 @@ top: 3rem;
   }
 
   .casestudyHero {
+    grid-template-columns: 1fr 80% 1fr;
     margin: 0 4% -15% 4%;
+  }
+
+  #projectImage {
+    max-width: 40rem;
   }
 
   .casestudy {
     margin: 0 2% 2% 2%;
     display: grid;
-    grid-template-columns: 1fr 80% 1fr;
+    grid-template-columns: 1fr 70% 1fr;
   }
 
   .fullGrid {
     grid-column: 1/4;
     display: grid;
-    grid-template-columns: 1fr 80% 1fr;
+    grid-template-columns: 1fr 70% 1fr;
+  }
+
+  /* Previous and Next Buttons */
+  .prev, .next {
+    margin-left: -9rem;
+    font-size: 4rem;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    margin-right: -9rem;
   }
 
   /* Navigation Menu */
