@@ -12,7 +12,7 @@ body {
   box-sizing: border-box;
 }
 
-.container {
+.workContainer {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -22,7 +22,7 @@ body {
 
 /* Typography */
 
-h1 {
+.workContainer h1 {
   font-family: interstate, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -30,7 +30,7 @@ h1 {
   color: #FFFFFF;
 }
 
-p {
+.workContainer p {
   font-family: montserrat, sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -38,17 +38,17 @@ p {
   color: #FFFFFF;
 }
 
-.casestudyScroller > p {
+.workContainer .casestudyScroller > p {
   font-size: 2.4rem;
 }
 
-img {
+.workContainer img {
   max-width: 100%;
 }
 
 /* Navigation */
 
-nav.top {
+.workContainer nav.top {
   margin: 0;
   margin-bottom: 4rem;
   display: grid;
@@ -56,13 +56,13 @@ nav.top {
   grid-auto-flow: column;
 }
 
-#logo {
+.workContainer #logo {
   grid-column: 3/4;
   width: 6.6rem;
   justify-self: center;
 }
 
-#closedMenu {
+.workContainer #closedMenu {
   grid-column: 5/6;
   height: 2.3rem;
   justify-self: end;
@@ -78,7 +78,6 @@ nav.top {
   grid-template-columns: 1fr 1fr auto 1fr 1fr;
   grid-template-rows: 1fr auto;
   grid-gap: 2%;
-  grid-row-gap: 0;
   align-items: center;
 }
 
@@ -88,8 +87,13 @@ nav.top {
   grid-column: 3/4;
   max-width: 70rem;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto;
   grid-gap: 2.5rem;
+}
+
+.casestudyImage {
+  grid-column: span 2;
 }
 
 /* Case Study Scroller  */
@@ -143,205 +147,4 @@ nav.top {
   min-width: 4rem;
   transform: rotate(90deg);
   /* justify-self: end; */
-}
-
-/* Hide */
-
-#mobileMenu, #mobileArrow, .mobileContainer {
-  display: none;
-}
-
-/* Menu Overlay (background) */
-.overlay {
- height: 0;
- width: 100%;
- position: fixed;
- z-index: 1;
- left: 0;
- top: 0;
- background-color: #122837;
- overflow-x: hidden; /* Disable horizontal scroll */
- transition: 0.3s;
-}
-
-/* Overlay Content */
-.overlay-content {
-   position: relative;
-   top: 25rem;
-   width: 100%;
-   text-align: center;
-   margin-top: 1rem;
-  }
-
-/* Navigation Links */
-.overlay a {
-  font-family: interstate, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 4.8rem;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: .2rem;
-  margin-bottom: 5rem;
-  display: block; /* Display block instead of inline */
-  transition: 0.2s; /* Transition effects on hover (color) */
-}
-
-/* When you mouse over the navigation links, change their color */
-
-.overlay-content a {
-  width: 20%;
-  margin: auto;
-  margin-bottom: 5rem;
-}
-
-.overlay-content a:hover {
-   border-bottom: solid #567582;
-  padding-bottom: 2rem;
-}
-
-
-.overlay-content a:focus, .overlay-content a:active, #active {
-  border-bottom: solid #6AEBF7;
-  padding-bottom: 2rem;
-}
-
-/* Position the close button (top right corner) */
-.overlay .closeMenu {
- position: absolute;
- top: 3rem;
- right: 5rem;
- max-width: 5rem;
-}
-
-.overlay #overlayContact {
-  width: 20rem;
-  margin: auto;
-  margin-top: 10rem;
-  padding: 2rem;
-  font-size: 3.2rem;
-  border: thin solid #FFFFFF;
-  border-radius: 100rem;
-}
-
-.overlay #overlayContact:hover {
-  color: #567582;
-  border: thin solid #567582;
-}
-
-
-/* Screens */
-
-@media screen and (max-width: 1150px) {
-  html {
-    font-size: 9px;
-  }
-  .casestudyScroller {
-    display: none;
-  }
-  .mobileScroll {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 950px) {
-  html {
-    font-size: 8px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-
-  .container {
-    position: static;
-    padding-bottom: 0;
-  }
-
-  /* Hide  */
-
-  .casestudies {
-    display: none;
-  }
-
-  /* Mobile Container */
-
-
-  .mobileContainer {
-    display: block;
-    background: rgba(255, 255, 255, 0.05);
-    overflow-x: hidden;
-  }
-
-  .work {
-    width: 80%;
-    margin: 3rem auto;
-  }
-
-  /* Work */
-
-  #blueLine {
-    display: none;
-    position: absolute;
-    width: 2rem;
-    height: 2px;
-    left: 0;
-    margin-top: 9rem;
-    background: linear-gradient(270deg, #154766 0%, #1A8BA4 52.49%, #6AEBF7 100%);
-  }
-
-  .work > h1 {
-    padding: 8rem 0;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  /* Case Study */
-
-  article {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto;
-    grid-row-gap: 3rem;
-    margin-bottom: 8rem;
-  }
-
-  img {
-    grid-column: span 2;
-    max-width: 100%;
-    height: auto;
-  }
-
-  input {
-    justify-self: end;
-    height: 3.5rem;
-  }
-
-  /* Footer */
-
-  /* footer {
-    width: 100%;
-    height: 12rem;
-    background: #122837;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-  } */
-}
-
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 7px;
-  }
-
-  /* overlay menu */
-  .overlay-content a {
-    font-size: 3.2rem;
-    width: 30%;
-    margin: auto;
-    margin-bottom: 5rem;
-  }
-
-  .overlay #overlayContact {
-    font-size: 2.4rem;
-  }
 }

@@ -3,7 +3,7 @@
 html {
   font-size: 10px;
   box-sizing: border-box;
-  background: linear-gradient(173.81deg, #05070F 0%, #122837 48.62%, #567582 100%);
+  background: linear-gradient(90deg, #05070F 0%, #122837 48.62%, #567582 100%);
 }
 
 *, *:before, *:after {
@@ -26,7 +26,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 1.6rem;
   text-align: center;
-  margin: 20rem 0;
+  margin: 20rem 0 7rem 0;
   color: #000000;
 }
 
@@ -80,34 +80,97 @@ img {
   margin: 3.5rem 0rem;
 }
 
-/* Navigation Bar */
 
-nav.border {
-  margin: 3% 5%;
+/* Navigation Top */
+
+nav.navTop {
+  /* position: fixed; */
+  width: 90%;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 4rem 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-auto-flow: column;
+  align-content: start;
 }
 
-#ReturnToWork{
-  width: 9rem;
+#ReturnToWork {
   justify-self: start;
+  text-decoration: none;
 }
 
-#logo {
+#ReturnToWork p {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding-top: 1rem;
+  border-top: solid thin #FFFFFF;
+}
+
+#ReturnToWork p:hover {
+  border-top: solid thin #6AEBF7;
+}
+
+
+#navLogo {
+  grid-column: 2/3;
   width: 6.6rem;
   justify-self: center;
 }
 
 #closedMenu {
+  grid-column: 3/4;
   height: 2.3rem;
   justify-self: end;
+  /* margin-right: 5rem; */
+}
+
+/* Case Study Header */
+
+.casestudyHero {
+  background: rgba(255, 255, 255, 0.05);
+  margin: 0 7% -10% 7%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-items: center;
+}
+
+.casestudyHero > * {
+  grid-column: 2/3;
+}
+
+#headerLogo {
+  grid-column: 2/3;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 9rem;
+  padding-top: 9rem;
+}
+
+#projectName {
+  color: #FFFFFF;
+  font-size: 2.4rem;
+  margin: 5rem 0;
+}
+
+#projectInfo {
+  color: #FFFFFF;
+  margin-bottom: 5rem;
+}
+
+#projectImage {
+  margin-top: 0;
+  max-width: 60rem;
 }
 
 /* Case Study */
 
 .casestudy {
   background: #FFFFFF;
-  margin: 2% 5% 5% 5%;
+  margin: 0 5% 5% 5%;
+  padding-top: 8%;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6);
@@ -123,22 +186,8 @@ nav.border {
   grid-template-columns: 1fr 2fr 1fr;
 }
 
-#blueLine {
-  width: 148px;
-  height: 0px;
-  margin: auto;
-  margin-top: 1.8rem;
-  border: 1px solid #1A8BA4;
-}
 
-/* Project Name */
-
-#title {
-  margin-top: 24rem;
-  margin-bottom: 5rem;
-}
-
-/* Hero */
+/* Case Study Details */
 
 .projectDetails {
   display: grid;
@@ -330,8 +379,9 @@ nav.border {
 
 #protoButton {
   width: 20%;
-  margin: auto;
+  margin: 0 auto;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 #userButton {
@@ -351,6 +401,308 @@ nav.border {
   float: left;
 }
 
+/* Menu Overlay (background) */
+
+.overlay {
+ height: 0;
+ width: 100%;
+ position: fixed;
+ z-index: 1;
+ left: 0;
+ top: 0;
+ background-color: #122837;
+ overflow-x: hidden; /* Disable horizontal scroll */
+ transition: 0.3s;
+}
+
+/* Overlay Content */
+.overlay-content {
+   position: relative;
+   top: 25rem;
+   width: 100%;
+   text-align: center;
+   margin-top: 1rem;
+  }
+
+/* Navigation Links */
+.overlay a {
+  font-family: interstate, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 4.8rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: .2rem;
+  margin-bottom: 5rem;
+  display: block; /* Display block instead of inline */
+  transition: 0.2s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.overlay-content a {
+  width: 22%;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+.overlay-content h1, .overlay-content p {
+  text-decoration: none;
+  text-align: center;
+  font-family: montserrat, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2.4rem;
+  color: #FFFFFF;
+  letter-spacing: 1;
+}
+
+.overlay-content a:hover {
+  border-bottom: solid #567582;
+  padding-bottom: 2rem;
+}
+
+
+.overlay-content a:focus, .overlay-content a:active, .overlay-content #active {
+  border-bottom: solid #6AEBF7;
+  padding-bottom: 2rem;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closeMenu {
+ position: absolute;
+ top: 3rem;
+ right: 5rem;
+}
+
+.closeMenu img {
+  margin-top: 0;
+}
+
+/* Contact  */
+
+#contact {
+  margin: auto;
+  margin-top: 10rem;
+  padding-bottom: 0rem;
+  border-bottom: solid thin #567582;
+  cursor:pointer;
+}
+
+#contact h1, #contact p  {
+  text-decoration: none;
+  font-family: montserrat, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2.4rem;
+  letter-spacing: 1;
+  color: #567582;
+  transition: .2s;
+}
+
+#contact p {
+  color: #FFFFFF;
+}
+
+#contact:hover {
+  padding-bottom: 0;
+  border-bottom: solid thin  #6AEBF7;
+}
+
+#designTag {
+  margin-top: 5rem;
+  font-size: 1.4rem;
+}
+
+/* Image Enlarger */
+
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
+.lightbox img:hover {
+  border: solid .2rem rgb(255,255,255,1)
+}
+
+.lightbox-target {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background: rgba(0,0,0,.2);
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+}
+
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+
+.lightbox-target img {
+width: 60%;
+position: absolute;
+border: .2rem solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+box-sizing: border-box;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Styles the close link, adds the slide down transition */
+
+a.lightbox-close {
+display: block;
+width: 5rem;
+height: 5rem;
+box-sizing: border-box;
+background: white;
+color: #567582;
+text-decoration: none;
+position: absolute;
+top: 3rem;
+right: 5rem;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:before {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+color: #567582;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:after {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+color: #567582;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(-45deg);
+-moz-transform:rotate(-45deg);
+-o-transform:rotate(-45deg);
+transform:rotate(-45deg);
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+
+.lightbox-target:target {
+opacity: 1;
+top: 0;
+bottom: 0;
+}
+
+.lightbox-target:target img {
+max-height: 100%;
+max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+top: 3rem;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -2.2rem;
+  margin-left: -15rem;
+  padding: 16px;
+  color: #636363;
+  font-weight: normal;
+  font-size: 6rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  margin-right: -15rem;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: #1A8BA4;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
 /* Media Screen for Tablet  */
 
 /* Media Screens */
@@ -362,7 +714,7 @@ nav.border {
   }
 
   .casestudy {
-    margin: 4% 4%;
+    margin: 0 4% 4% 4%;
     display: grid;
     grid-template-columns: 1fr 70% 1fr;
   }
@@ -416,84 +768,6 @@ nav.border {
   }
 }
 
-/* Menu Overlay (background) */
-.overlay {
- height: 0;
- width: 100%;
- position: fixed;
- z-index: 1;
- left: 0;
- top: 0;
- background-color: #122837;
- overflow-x: hidden; /* Disable horizontal scroll */
- transition: 0.3s;
-}
-
-/* Overlay Content */
-.overlay-content {
-   position: relative;
-   top: 25rem;
-   width: 100%;
-   text-align: center;
-   margin-top: 1rem;
-  }
-
-/* Navigation Links */
-.overlay a {
-  font-family: interstate, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 4.8rem;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: .2rem;
-  margin-bottom: 5rem;
-  display: block; /* Display block instead of inline */
-  transition: 0.2s; /* Transition effects on hover (color) */
-}
-
-/* When you mouse over the navigation links, change their color */
-
-.overlay-content a {
-  width: 20%;
-  margin: auto;
-  margin-bottom: 5rem;
-}
-
-.overlay-content a:hover {
-   border-bottom: solid #567582;
-  padding-bottom: 2rem;
-}
-
-
-.overlay-content a:focus, .overlay-content a:active, #active {
-  border-bottom: solid #6AEBF7;
-  padding-bottom: 2rem;
-}
-
-/* Position the close button (top right corner) */
-.overlay .closeMenu {
- position: absolute;
- top: 3rem;
- right: 5rem;
- max-width: 5rem;
-}
-
-.overlay #overlayContact {
-  width: 20rem;
-  margin: auto;
-  margin-top: 10rem;
-  padding: 2rem;
-  font-size: 3.2rem;
-  border: thin solid #FFFFFF;
-  border-radius: 100rem;
-}
-
-.overlay #overlayContact:hover {
-  color: #567582;
-  border: thin solid #567582;
-}
-
 /* Media Screen for Mobile */
 
 @media screen and (max-width: 600px) {
@@ -502,8 +776,12 @@ nav.border {
     font-size: 7px;
   }
 
+  .casestudyHero {
+    margin: 0 4% -15% 4%;
+  }
+
   .casestudy {
-    margin: 2% 2%;
+    margin: 0 2% 2% 2%;
     display: grid;
     grid-template-columns: 1fr 80% 1fr;
   }

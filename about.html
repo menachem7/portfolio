@@ -13,25 +13,32 @@
     <title>Menachem Polonsky | About</title>
   </head>
   <body>
-    <div class="aboutmeContainer">
-      <!-- Logo and Menu -->
-      <nav class="top">
-        <!-- Logo -->
-        <input type="image" src="images/00 - Logo/Logo.png" class="button" id="logo" type="button" onclick="window.location.href = 'index.html';">
-        <!-- Menu -->
-        <input type="image" src="images/11 - Icons_Images/menu_closed_white.png" class="button" id="closedMenu" type="button" onclick="openNav()">
-      </nav>
+
+    <!-- Navigation Top -->
+    <nav class="navTop"
+      <!-- Logo -->
+      <input type="image" src="images/00 - Logo/Logo.png" class="button" id="navLogo" type="button" onclick="window.location.href = 'index.html';">
+      <!-- Menu -->
+      <input type="image" src="images/11 - Icons_Images/menu_closed_white.png" class="button" id="closedMenu" type="button" onclick="openNav()">
+    </nav>
+
+    <!-- Navigation Sides -->
+    <nav class="navSides">
+      <!-- Work -->
+      <a href="index.html#workContainer" id="workButton">
+          <h1>Work</h1>
+      </a>
+      <!-- About -->
+      <a id="aboutButton" href="about.html">
+        <h1>About</h1>
+      </a>
+    </nav>
+
+    <!-- About -->
+    <div class="aboutContainer">
+
       <!-- About Me Section -->
-      <section class="aboutmeSection">
-
-        <!-- Menu Button: Work Section -->
-        <input type="image" src="images/11 - Icons_Images/work-section-inactive.png" id="workButton" type="button" onclick="window.location.href = 'work.html';">
-
-        <!-- Menu Button: About Section -->
-        <input type="image" src="images/11 - Icons_Images/about_section_active.png" id="aboutButton" type="button" onclick="window.location.href = 'about.html';">
-
-        <!--  Menu Button: Contact -->
-        <input type="image" src="images/11 - Icons_Images/ContactButton.png" id="contactButton" type="button" onclick="window.location.href = 'https://www.google.com';">
+      <section class="aboutSection">
 
         <!-- About Me Image -->
         <img id="selfPortrait" src="images/13 - About/self-portrait.png">
@@ -55,15 +62,23 @@
         </p>
 
         <!-- About Me Buttons -->
-        <div class="aboutmeButtons">
+        <div class="aboutButtons">
           <!-- Linkedin -->
-          <input type="image" src="images/11 - Icons_Images/LinkedIn.png" class="aboutmeButton" type="button" onclick="window.location.href = 'https://www.google.com';">
+          <a class="aboutButton" href="https://www.linkedin.com/in/menachem-polonsky">
+            <p>linkedin</p>
+          </a>
           <!-- Resume -->
-          <input type="image" src="images/11 - Icons_Images/Resume.png" class="aboutmeButton" type="button" onclick="window.location.href = 'https://www.google.com';">
+          <a class="aboutButton" href="">
+            <p>resume</p>
+          </a>
           <!-- GitHub -->
-          <input type="image" src="images/11 - Icons_Images/Github.png" class="aboutmeButton" type="button" onclick="window.location.href = 'https://www.google.com';">
+          <a class="aboutButton" href="https://github.com/menachem7">
+            <p>github</p>
+          </a>
           <!-- Instagram -->
-          <input type="image" src="images/11 - Icons_Images/Instagram.png" class="aboutmeButton" type="button" onclick="window.location.href = 'https://www.google.com';">
+          <a class="aboutButton" href="https://www.instagram.com/mpolonsky_/">
+            <p>instagram</p>
+          </a>
         </div>
       </section>
     </div>
@@ -72,18 +87,39 @@
 
      <!-- Button to close the overlay navigation -->
      <a href="javascript:void(0)" class="closeMenu" onclick="closeNav()">
-       <img src="images/11 - Icons_Images/menu_open.png">
+       <img src="images/11 - Icons_Images/menu_open.png" style="width: 5rem">
      </a>
 
      <!-- Overlay content -->
      <div class="overlay-content">
-       <a href="index.html">Home</a>
+       <a href="index.html#workContainer">Work</a>
        <a href="about.html" id="active">About</a>
-       <a href="work.html">Work</a>
-       <a href="mailto:m@mbenleonardo.com" id="overlayContact">Contact</a>
+       <a class="btn" id="contact" onmouseover="selectContact()"
+       onmouseout="deselectContact()"
+       onclick="copiedConfirmation()"
+       data-clipboard-text="m@mbenleonardo.com">
+         <h1 id="click">click to copy</h1>
+         <p>m@mbenleonardo.com</p>
+       </a>
+       <p id="designTag">designed and coded by Menachem Polonsky</p>
      </div>
 
     </div>
+
+
+    <!-- Include Clipboard -->
+    <script src="dist/clipboard.min.js"></script>
+    <!-- 3. Instantiate clipboard by passing a string selector -->
+    <script>
+      var clipboard = new ClipboardJS('.btn');
+
+      clipboard.on('success', function(e) {
+          console.log(e);
+      });
+      clipboard.on('error', function(e) {
+          console.log(e);
+      });
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132132938-1"></script>
     <script>

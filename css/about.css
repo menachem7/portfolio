@@ -13,9 +13,8 @@ body {
   background: linear-gradient(47.77deg, #05070F 27.82%, #122837 56.13%, #567582 100%);
 }
 
-.aboutmeContainer {
+.aboutContainer {
   width: 100%;
-  margin: 4rem 0;
 }
 
 /* Typography */
@@ -52,15 +51,22 @@ img {
 
 /* Navigation */
 
-nav.top {
-  margin: 0;
-  margin-bottom: 4rem;
+/* Navigation Top */
+
+nav.navTop {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 4rem 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 2fr;
   grid-auto-flow: column;
+  /* background: rgba(255, 255, 255, 0.1); */
 }
 
-#logo {
+#navLogo {
   grid-column: 2/3;
   width: 6.6rem;
   justify-self: center;
@@ -73,16 +79,69 @@ nav.top {
   margin-right: 5rem;
 }
 
-/* Case Study Section and Side Menus */
+/* Navigation Sides */
 
-.aboutmeSection {
+nav.navSides {
+  position: fixed;
   width: 100%;
-  margin: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.navSides a {
+  text-decoration: none;
+}
+
+#workButton, #aboutButton {
+  position: fixed;
+  top: 42%;
+}
+
+#workButton h1 {
+  font-size: 2.4rem;
+  padding: 5rem 2rem;
+  margin-left: 2rem;
+  /* Active */
+  /* border-left: solid thin #6AEBF7;  */
+  /* Inactive */
+  border-left: solid thin #567582;
+}
+
+#workButton h1:hover {
+  border-left: solid thin #6AEBF7;
+}
+
+#aboutButton {
+  justify-self: end;
+}
+
+#aboutButton h1 {
+  font-size: 2.4rem;
+  padding: 5rem 2rem;
+  margin-right: 2rem;
+  /* Active */
+  border-right: solid thin #6AEBF7;
+  /* Inactive */
+  /* border-right: solid thin #567582; */
+}
+
+#aboutButton h1:hover {
+  border-right: solid thin #6AEBF7;
+}
+
+/* About */
+
+.aboutSection {
+  width: 100%;
+  padding: 15rem 0;
   display: grid;
   grid-template-columns: 1fr 56rem 1fr 1fr;
   grid-template-areas:
-  "Work Portrait Portrait About"
-  ". Essay Buttons Contact";
+  ". Portrait Portrait ."
+  ". Essay Buttons .";
   grid-row-gap: 5rem;
   grid-column-gap: 2rem;
   align-items: center;
@@ -98,7 +157,7 @@ nav.top {
   grid-area: Essay;
 }
 
-.aboutmeButtons {
+.aboutButtons {
   grid-area: Buttons;
   align-self: start;
   display: grid;
@@ -107,29 +166,21 @@ nav.top {
 
 /* Buttons */
 
-#workButton, #aboutButton, #contactButton {
-  height: 3rem;
-}
-
-#workButton {
-  grid-area: Work;
-}
-
-#aboutButton {
-  grid-area: About;
+.aboutButton {
+  text-decoration: none;
+  text-align: center;
   justify-self: end;
+  width: 13.2rem;
 }
 
-#contactButton {
-  grid-area: Contact;
-  align-self: start;
-  justify-self: end;
-  margin-right: 2rem;
+.aboutButton p {
+  padding-bottom: .7rem;
+  border-bottom: solid thin #567582;
 }
 
-.aboutmeButton {
-  max-width: 13.6rem;
-  justify-self: end;
+.aboutButton p:hover {
+  padding-bottom: .7rem;
+  border-bottom: solid thin #6AEBF7;
 }
 
 /* Menu Overlay (background) */
@@ -171,18 +222,30 @@ nav.top {
 /* When you mouse over the navigation links, change their color */
 
 .overlay-content a {
-  width: 20%;
+  width: 22%;
   margin: auto;
   margin-bottom: 5rem;
 }
 
+.overlay-content h1, .overlay-content p {
+  text-decoration: none;
+  text-align: center;
+  font-family: montserrat, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2.4rem;
+  color: #FFFFFF;
+  letter-spacing: 1;
+  line-height: 2;
+}
+
 .overlay-content a:hover {
-   border-bottom: solid #567582;
+  border-bottom: solid #567582;
   padding-bottom: 2rem;
 }
 
 
-.overlay-content a:focus, .overlay-content a:active, #active {
+.overlay-content a:focus, .overlay-content a:active, .overlay-content #active {
   border-bottom: solid #6AEBF7;
   padding-bottom: 2rem;
 }
@@ -192,41 +255,54 @@ nav.top {
  position: absolute;
  top: 3rem;
  right: 5rem;
- max-width: 5rem;
 }
 
-.overlay #overlayContact {
-  width: 20rem;
+/* Contact  */
+
+#contact {
   margin: auto;
   margin-top: 10rem;
-  padding: 2rem;
-  font-size: 3.2rem;
-  border: thin solid #FFFFFF;
-  border-radius: 100rem;
+  padding-bottom: 0rem;
+  border-bottom: solid thin #567582;
+  cursor:pointer;
 }
 
-.overlay #overlayContact:hover {
+#contact h1, #contact p  {
+  text-decoration: none;
+  font-family: montserrat, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2.4rem;
+  letter-spacing: 1;
   color: #567582;
-  border: thin solid #567582;
+  transition: .2s;
+}
+
+#contact p {
+  color: #FFFFFF;
+}
+
+#contact:hover {
+  padding-bottom: 0;
+  border-bottom: solid thin  #6AEBF7;
+}
+
+#designTag {
+  margin-top: 5rem;
+  font-size: 1.4rem;
 }
 
 /* Screens */
 
-@media screen and (max-width: 1150px) {
-  html {
-    font-size: 9px;
-  }
-  .casestudyScroller {
-    display: none;
-  }
-  .mobileScroll {
-    display: block;
-  }
-}
-
 @media screen and (max-width: 950px) {
   html {
     font-size: 8px;
+  }
+
+  /* Navigation Sides */
+
+  nav.navSides {
+    display: none;
   }
 }
 
@@ -234,9 +310,8 @@ nav.top {
 
   /* General */
 
-  .aboutmeContainer {
+  body, nav {
     min-width: 300px;
-    margin: 4rem 0;
   }
 
   /* Menu Button */
@@ -245,47 +320,61 @@ nav.top {
     margin-right: 2rem;
   }
 
-  /* Navigation Buttons */
-  #workButton, #aboutButton, #contactButton {
+  /* Navigation Sides */
+  nav.navSides {
     display: none;
   }
 
   /* About Me Section */
-  .aboutmeSection {
+  .aboutSection {
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas:
-    "Portrait"
-    "Buttons"
-    "Essay";
+    ". Portrait ."
+    ". Buttons ."
+    ". Essay .";
     grid-row-gap: 3rem;
     grid-column-gap: 2rem;
     align-items: center;
     justify-items: center;
   }
 
+  .abooutmeSection > * {
+    grid-column: 2/3;
+  }
+
   #selfPortrait {
     grid-area: Portrait;
-    grid-column: 2/3;
     max-width: 100%;
     justify-self: center;
   }
 
   #essay {
     grid-area: Essay;
-    grid-column: 2/3;
   }
 
-  .aboutmeButtons {
+  .aboutButtons {
     grid-area: Buttons;
-    grid-column: 2/3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 2.4rem;
   }
+
+  .aboutButton {
+    justify-self: center;
+  }
+}
 
   @media screen and (max-width: 600px) {
     html {
       font-size: 7px;
+    }
+
+    .aboutButtons {
+      grid-area: Buttons;
+      grid-column: 2/3;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2.4rem;
     }
 
     /* overlay menu */

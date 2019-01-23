@@ -5,8 +5,7 @@ html {
 }
 
 body {
-  height: 100vh;
-  overflow-x: hidden;
+  height: 100%;
   box-sizing: border-box;
   background: linear-gradient(47.77deg, #05070F 27.82%, #122837 56.13%, #567582 100%);
 }
@@ -15,27 +14,38 @@ body {
   box-sizing: inherit;
 }
 
-.container {
-  position: absolute;
+/* Home  */
+
+.home {
   width: 100%;
-  bottom: 0;
+  height: 0;
   overflow: hidden;
+  padding: 0;
+  transition: .8s;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: linear-gradient(47.77deg, #05070F 27.82%, #122837 56.13%, #567582 100%);
+}
+
+.homeContainer {
+  position: absolute;
+  margin: 0 5%;
+  width: 90%;
+  bottom: 0;
   display: grid;
-  justify-content: center;
+  justify-items: center;
+  text-align: center;
   grid-template-rows: repeat(3, auto);
   grid-gap: 10rem;
 }
 
-/* Hide */
-
-#closedMenu {
-  display: none;
+.homeContainer > * {
 }
 
-/* Info */
-
-#mainLogo  {
-  justify-self: center;
+#logo  {
+  /* justify-self: center; */
   width: 20rem;
 }
 
@@ -47,38 +57,244 @@ h1 {
   color: #FFFFFF;
 }
 
-.container a {
+.homeContainer p {
   text-decoration: none;
-  justify-self: center;
   font-family: montserrat, sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-style: normal;
   font-size: 2.2rem;
   color: #FFFFFF;
+  letter-spacing: 1;
 }
 
-/* Enter Site */
-
-#enterLine {
+#homeLine {
   width: 9rem;
-  height: .2rem;
-  margin: auto;
-  margin-top: -4rem;
+  height: .1rem;
+  /* margin: auto; */
+  margin-top: -2rem;
   transform: rotate(90deg);
   background: linear-gradient(270deg, #154766 0%, #1A8BA4 52.49%, #6AEBF7 100%);
 }
 
+/* Navigation */
+
+/* Navigation Top */
+
+nav.navTop {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-auto-flow: column;
+  /* background: rgba(255, 255, 255, 0.1); */
+}
+
+#navLogo {
+  grid-column: 2/3;
+  width: 6.6rem;
+  justify-self: center;
+}
+
+#closedMenu {
+  grid-column: 3/4;
+  height: 2.3rem;
+  justify-self: end;
+  margin-right: 5rem;
+}
+
+/* Navigation Sides */
+
+nav.navSides {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.navSides a {
+  text-decoration: none;
+}
+
+#workButton, #aboutButton {
+  position: fixed;
+  top: 42%;
+}
+
+#workButton h1 {
+  font-size: 2.4rem;
+  padding: 5rem 2rem;
+  margin-left: 2rem;
+  /* Active */
+  border-left: solid thin #6AEBF7;
+  /* Inactive */
+  /* border-left: solid thin #567582;  */
+}
+
+#workButton h1:hover {
+  border-left: solid thin #6AEBF7;
+}
+
+#aboutButton {
+  justify-self: end;
+}
+
+#aboutButton h1 {
+  font-size: 2.4rem;
+  padding: 5rem 2rem;
+  margin-right: 2rem;
+  /* Active */
+  /* border-right: solid thin #6AEBF7; */
+  /* Inactive */
+  border-right: solid thin #567582;
+}
+
+#aboutButton h1:hover {
+  border-right: solid thin #6AEBF7;
+}
+
+/* Work Screen */
+
+.workContainer {
+  position: absolute;
+  width: 100%;
+  padding: 15rem 0 7rem 0;
+  background: linear-gradient(47.77deg, #05070F 27.82%, #122837 56.13%, #567582 100%);
+}
+
+/* Typography */
+
+.workContainer h1 {
+  font-family: interstate, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.4rem;
+  color: #FFFFFF;
+}
+
+.workContainer p {
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.8rem;
+  color: #FFFFFF;
+}
+
+.workContainer .casestudyScroller > p {
+  font-size: 2.4rem;
+}
+
+.workContainer img {
+  max-width: 100%;
+}
+
+
+/* Case Study Section and Side Menus */
+
+.casestudies {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr auto;
+  grid-gap: 2%;
+  grid-row-gap: 0rem;
+  align-items: center;
+}
+
+/* Case Study */
+
+.casestudy {
+  grid-column: 2/3;
+  max-width: 70rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-gap: 2.5rem;
+}
+
+.casestudyImage {
+  grid-column: span 2;
+}
+
+.casestudy a {
+  text-decoration: none;
+  justify-self: end;
+}
+
+#casestudyButton p {
+  padding-bottom: .7rem;
+  border-bottom: solid thin #567582;
+}
+
+#casestudyButton p:hover {
+  padding-bottom: .7rem;
+  border-bottom: solid thin #6AEBF7;
+}
+
+/* Case Study Scroller */
+
+.casestudyScroller {
+  display: none;
+  /* display: grid; */
+  /* position: fixed; */
+  top: 30%;
+  grid-template-rows: auto;
+  justify-items: center;
+  grid-row-gap: 4rem;
+}
+
+.mobileScroll {
+  display: none;
+  justify-self: center;
+}
+
+/* Buttons */
+
+#scrollUp, #scrollDown {
+  max-width: 6rem;
+  min-width: 4rem;
+}
+
+#mobile_scroll_left {
+  grid-column: 2/3;
+  max-width: 6rem;
+  min-width: 4rem;
+  transform: rotate(-90deg);
+}
+
+#mobile_scroll_right {
+  grid-row: 1/2;
+  grid-column: 4/5;
+  max-width: 6rem;
+  min-width: 4rem;
+  transform: rotate(90deg);
+  /* justify-self: end; */
+}
+
+/* Hide */
+
+.mobileContainer {
+  display: none;
+}
+
 /* Menu Overlay (background) */
 .overlay {
-   height: 0;
-   width: 100%;
-   position: fixed;
-   z-index: 1;
-   left: 0;
-   top: 0;
-   background-color: #122837;
-   overflow-x: hidden; /* Disable horizontal scroll */
-   transition: 0.3s;
+ height: 0;
+ width: 100%;
+ position: fixed;
+ z-index: 1;
+ left: 0;
+ top: 0;
+ background-color: #122837;
+ overflow-x: hidden; /* Disable horizontal scroll */
+ transition: 0.3s;
 }
 
 /* Overlay Content */
@@ -107,18 +323,30 @@ h1 {
 /* When you mouse over the navigation links, change their color */
 
 .overlay-content a {
-  width: 20%;
+  width: 22%;
   margin: auto;
   margin-bottom: 5rem;
 }
 
+.overlay-content h1, .overlay-content p {
+  text-decoration: none;
+  text-align: center;
+  font-family: montserrat, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2.4rem;
+  color: #FFFFFF;
+  letter-spacing: 1;
+  line-height: 2;
+}
+
 .overlay-content a:hover {
-   border-bottom: solid #567582;
+  border-bottom: solid #567582;
   padding-bottom: 2rem;
 }
 
 
-.overlay-content a:focus, .overlay-content a:active, #active {
+.overlay-content a:focus, .overlay-content a:active, .overlay-content #active {
   border-bottom: solid #6AEBF7;
   padding-bottom: 2rem;
 }
@@ -128,30 +356,75 @@ h1 {
  position: absolute;
  top: 3rem;
  right: 5rem;
- max-width: 5rem;
 }
 
-.overlay #overlayContact {
-  width: 20rem;
+/* Contact  */
+
+#contact {
   margin: auto;
   margin-top: 10rem;
-  padding: 2rem;
-  font-size: 3.2rem;
-  border: thin solid #FFFFFF;
-  border-radius: 100rem;
+  padding-bottom: 0rem;
+  border-bottom: solid thin #567582;
+  cursor:pointer;
 }
 
-.overlay #overlayContact:hover {
+#contact h1, #contact p  {
+  text-decoration: none;
+  font-family: montserrat, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2.4rem;
+  letter-spacing: 1;
   color: #567582;
-  border: thin solid #567582;
+  transition: .2s;
 }
 
+#contact p {
+  color: #FFFFFF;
+}
+
+#contact:hover {
+  padding-bottom: 0;
+  border-bottom: solid thin  #6AEBF7;
+}
+
+#designTag {
+  margin-top: 5rem;
+  font-size: 1.4rem;
+}
+
+
+/* Mobile */
+
+.mobile_workHeading {
+  display: none;
+}
+
+/* Screens */
 
 /* Tablet Screen */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
   html {
-    font-size: 9px;
+      font-size: 8px;
+  }
+
+  /* General */
+
+  body, nav, .workContainer {
+    min-width: 300px;
+  }
+
+  /* Navigation Sides */
+
+  nav.navSides {
+    display: none;
+  }
+
+  /* Case Study Scroller */
+
+  .casestudyScroller {
+    display: none;
   }
 }
 
@@ -160,36 +433,36 @@ h1 {
 @media screen and (max-width: 600px) {
   html {
     font-size: 7px;
-    min-width: 350px;
   }
 
-  #mainLogo {
-    margin-top: 4rem;
+  .homeContainer {
+    width: 90%;
   }
 
-  #enterLine {
-    width: 9rem;
-    height: .2rem;
-    margin: 0 auto;
-    margin-top: -4rem;
-    bottom: 0;
-  }
+  /* Hide */
 
-  .container > * {
-    grid-column: span 3;
-    text-align: center;
-  }
-
-  .container > p {
+  .casestudyScroller, nav.navSides {
     display: none;
   }
 
-  #closedMenu {
-    position: absolute;
+  /* Work */
+
+  .mobile_workHeading {
     display: block;
-    width: 10%;
-    right: 4rem;
-    top: 3rem;
+  }
+
+
+  .mobile_workHeading > h1 {
+      padding: 4rem 0;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 3.2rem;
+  }
+
+  .casestudies {
+    grid-row-gap: 8rem;
+    width: 80%;
+    margin: 0 auto;
   }
 
   /* overlay menu */

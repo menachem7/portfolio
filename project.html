@@ -6,55 +6,65 @@
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- Javascript -->
-  <script type="text/javascript" src="js/script.js"></script>
   <!-- Adobe Fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
   <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
   <title>Case Study | Workspace</title>
 </head>
 <body>
-  <!-- Nav -->
-  <nav class="border">
-    <!-- Return to Work -->
-    <input type="image" src="images/11 - Icons_Images/ReturnToWork.png" class="button" id="ReturnToWork" type="button" onclick="window.location.href = 'index.html';">
+
+  <!-- Navigation Top -->
+  <nav class="navTop">
+    <!-- Return To Work -->
+    <a href="index.html" id="ReturnToWork">
+      <p>return to work</p>
+    </a>
     <!-- Logo -->
-    <input type="image" src="images/00 - Logo/Logo.png" class="button" id="logo" type="button" onclick="window.location.href = 'index.html';">
+    <input type="image" src="images/00 - Logo/Logo.png" class="button" id="navLogo" type="button" onclick="window.location.href = 'index.html';">
     <!-- Menu -->
     <input type="image" src="images/11 - Icons_Images/menu_closed_white.png" class="button" id="closedMenu" type="button" onclick="openNav()">
   </nav>
-  <!-- Case Study -->
-  <main class="casestudy">
-    <div class="centerGrid" id="blueLine"></div>
+
+  <!-- Case Study Header -->
+  <div class="casestudyHero">
+    <!-- Workspace Logo -->
+    <img src="images/01 - Header_Images/workspace_logo.png" id="headerLogo">
     <!-- Project Name -->
-    <header class="centerGrid" id="title">Workspace</header>
+    <header class="centerGrid" id="projectName">
+      Workspace
+    </header>
       <!-- Hero -->
-      <section class="centerGrid">
-        <h1 id="titleInfo">
+        <h1 id="projectInfo">
           Rethinking cloud storage to rival Google Drive and iCloud
         </h1>
-        <!-- Button for Prototype -->
-        <input type="image" src="images/11 - Icons_Images/Prototype_Button.png" class="button" id="protoButton" type="button" onclick="window.location.href = 'https://invis.io/BANT4GQ7T53';">
-        <!-- Hero Image -->
-        <img src="images/01 - Header_Images/Header_Workspace.png">
-        <!-- Project Details -->
-        <div class="projectDetails">
-          <div class="client">
-            <p>Client</p>
-            <p>Bloc</p>
-          </div>
-          <div class="role">
-            <p>Role</p>
-            <p>UX/UI Design</p>
-          </div>
-          <div class="date">
-            <p>Date</p>
-            <p>2018</p>
-          </div>
+        <!-- Hero: Desktop Image -->
+        <img src="images/01 - Header_Images/workspace_desktop.png" id="projectImage">
+  </div>
+
+  <!-- Case Study -->
+  <main class="casestudy">
+
+    <section class="centerGrid">
+      <!-- Button for Prototype -->
+      <input type="image" src="images/11 - Icons_Images/prototype.png" class="button" id="protoButton" type="button" onclick="window.location.href = 'https://invis.io/BANT4GQ7T53';">
+      <!-- Project Details -->
+      <div class="projectDetails">
+        <div class="client">
+          <p><strong>Client</strong></p>
+          <p>Bloc</p>
         </div>
-      </section>
-      <!-- Summary -->
-      <section class="centerGrid">
+        <div class="role">
+          <p><strong>Role</strong></p>
+          <p>UX/UI Design</p>
+        </div>
+        <div class="date">
+          <p><strong>Date</strong></p>
+          <p>2018</p>
+        </div>
+      </div>
+    </section>
+    <!-- Summary -->
+    <section class="centerGrid">
         <!-- Intro -->
         <h2>Intro</h2>
         <p>
@@ -104,18 +114,62 @@
         <div class="logos">
           <img src="images/02 - Research_Images/Google Logo.png" alt="google logo" class="googleLogo">
           <img src="images/02 - Research_Images/Apple Logo.png" alt="apple logo" class="appleLogo">
-          <img src="images/02 - Research_Images/app-dropbox-android@2x.png" alt="dropbox logo" class="dropboxLogo">
+          <img src="images/02 - Research_Images/dropbox_logo.png" alt="dropbox logo" class="dropboxLogo">
           <img src="images/02 - Research_Images/box_logo.png" alt="box logo" class="boxLogo" />
         </div>
-        <div class="googleUserFlows">
-          <img src="images/02 - Research_Images/Google Drive - Make Groups copy.jpg" alt="make groups flow" class="googleFlow1">
-          <!-- <img src="images/02 - Research_Images/Google Drive - Onboarding copy.jpg" alt="onboarding flow" class="googleFlow2">
-          <img src="images/02 - Research_Images/Google Drive - Saving an Item copy.jpg" alt="saving file flow" class="googleFlow3"> -->
-        </div>
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container" id="googleUserFlows">
+
+         <!-- Full-width images with number and caption text -->
+
+         <!-- Slide 1 -->
+         <div class="mySlides1 fade">
+           <a class="lightbox" href="#googleFlow1">
+             <img src="images/02 - Research_Images/Google Drive - Make Groups copy.jpg" alt="google flow">
+           </a>
+           <div class="lightbox-target" id="googleFlow1">
+             <img src="images/02 - Research_Images/Google Drive - Make Groups copy.jpg" alt="google flow">
+             <a class="lightbox-close" href="#googleUserFlows"></a>
+           </div>
+         </div>
+
+        <!-- Slide 2 -->
+         <div class="mySlides1 fade">
+           <a class="lightbox" href="#googleFlow2">
+             <img src="images/02 - Research_Images/Google Drive - Onboarding copy.jpg" alt="onboarding flow">
+           </a>
+           <div class="lightbox-target" id="googleFlow2">
+             <img src="images/02 - Research_Images/Google Drive - Onboarding copy.jpg" alt="onboarding flow">
+             <a class="lightbox-close" href="#googleUserFlows"></a>
+           </div>
+         </div>
+
+        <!-- Slide 3 -->
+         <div class="mySlides1 fade">
+           <a class="lightbox" href="#googleFlow3">
+             <img src="images/02 - Research_Images/Google Drive - Saving an Item copy.jpg" alt="saving file flow" class="googleFlow3">
+           </a>
+           <div class="lightbox-target" id="googleFlow3">
+             <img src="images/02 - Research_Images/Google Drive - Saving an Item copy.jpg" alt="saving file flow" class="googleFlow3">
+             <a class="lightbox-close" href="#googleUserFlows"></a>
+           </div>
+         </div>
+
+         <!-- Next and previous buttons -->
+         <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+       </div>
         <p>
           I then conducted user surveys on over 20 participants to understand user perspectives and behaviors. Users proved my SWOT analysis correct, as over 80% of users prefered Google Drive to any other service. In trying to find an opportunity, users became my North Star, and indicated that organizing files was their greatest pain point.
         </p>
-        <img src="images/02 - Research_Images/User Survey Result.png" alt="user survey results" class="userSurvey">
+        <a class="lightbox" id="userSurveyOrigin" href="#userSurvey">
+          <img src="images/02 - Research_Images/User Survey Result.png" alt="user survey results">
+        </a>
+        <div class="lightbox-target" id="userSurvey">
+          <img src="images/02 - Research_Images/User Survey Result.png" alt="user survey results">
+          <a class="lightbox-close" href="#userSurveyOrigin"></a>
+        </div>
         <quote>
           “I don't like that Google Drive doesn't allow you to manually order items and that you have to choose one of their order methods (alphabetical, last modified, etc)”
         </quote>
@@ -134,20 +188,34 @@
           Cloud storage users indicating a need for improved file organization fell into two main demographics: 15 - 25, predominantly male (80%) and 25-35, predominantly female (60%). I targeted two individuals who aligned with the demographics of my target market and created user personas to guide me through the strategy phase.
         </p>
         <!-- Slideshow -->
-        <div class="userPersonas">
-          <!-- Slide Images with Numbers-->
-          <img class="userPersona" src="images/03 - Persona_Images/Persona (Dave).png">
-          <!-- <img class="userPersona" src="images/03 - Persona_Images/Persona (Elizabeth).png"> -->
+        <div class="slideshow-container" id="userPersonas">
+
+          <!-- User Persona : Dave -->
+          <div class="mySlides2 fade">
+            <a class="lightbox" href="#userDave">
+              <img class="userPersona" src="images/03 - Persona_Images/persona_dave.png">
+            </a>
+            <div class="lightbox-target" id="userDave">
+              <img class="userPersona" src="images/03 - Persona_Images/persona_dave.png">
+              <a class="lightbox-close" href="#userPersonas"></a>
+            </div>
+          </div>
+
+          <!-- User Persona : Elizabeth -->
+          <div class="mySlides2 fade">
+            <a class="lightbox" href="#userElizabeth">
+              <img class="userPersona" src="images/03 - Persona_Images/persona_elizabeth.png">
+            </a>
+            <div class="lightbox-target" id="userElizabeth">
+              <img class="userPersona" src="images/03 - Persona_Images/persona_elizabeth.png">
+            <a class="lightbox-close" href="#userPersonas"></a>
+            </div>
+          </div>
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
         </div>
-        <h3>Goals</h3>
-        <div class="goals">
-          <p class="listNumber">1</p>
-          <p>He wants his content organized in a straightforward manner.</p>
-          <p class="listNumber">2</p>
-          <p>He wants his content organized in a straightforward manner.</p>
-          <p class="listNumber">3</p>
-          <p>He wants his content organized in a straightforward manner.</p>
-        </div>
+
       </section>
       <!-- User Stories -->
       <section class="centerGrid">
@@ -155,8 +223,16 @@
         <p>
           With my users in mind I began creating user stories, including all user tasks whether painstakingly obvious or seemingly unnecessary. Using the Pareto Principle, I segmented 20% of the user stories as High Priority and 80% as Medium or Low Priority, preventing feature bloat and ensuring I could deliver an MVP a.s.a.p.
         </p>
-        <img src="images/04 - User Story_Images/User Stories_Image.png" alt="user stories" class="userStories">
-        <input type="image" src="images/11 - Icons_Images/UserStories_Button.png" class="button" id="userButton" type="button" onclick="window.location.href = 'https://docs.google.com/spreadsheets/d/13ex_YblPEgknM7Eq4LiY6peXMZT8RZRd88I36eKuIik/edit';">
+        <a class="lightbox" href="#userStories" id="userStoriesOrigin">
+          <img src="images/04 - User Story_Images/User Stories_Image.png" alt="user stories" class="userStories">
+        </a>
+        <div class="lightbox-target" id="userStories">
+          <img src="images/04 - User Story_Images/User Stories_Image.png" alt="user stories" class="userStories">
+          <a class="lightbox-close" href="#userStoriesOrigin"></a>
+        </div>
+
+
+        <input type="image" src="images/11 - Icons_Images/user_stories.png" class="button" id="userButton" type="button" onclick="window.location.href = 'https://docs.google.com/spreadsheets/d/13ex_YblPEgknM7Eq4LiY6peXMZT8RZRd88I36eKuIik/edit';">
       </section>
       <!-- Innovation -->
       <section class="fullGrid" id="innovationGray">
@@ -191,8 +267,22 @@
         <p>
           Innovation is great but not when it leads to a worse experience. Inspired by Dropbox’s onboarding process which gives users the option of personalizing their account type before they sign onto the platform for the first time, I designed the Smart Organization feature to be setup during the onboarding process.
         </p>
-        <img src="images/06 - Flows and Map_Images/Sitemap.png" alt="site map" class="siteMap">
-        <img src="images/06 - Flows and Map_Images/Final User Flows (Digital) copy.jpg" alt="final user flows" class="userFlows">
+        <!-- Site Map -->
+        <a class="lightbox" href="#siteMap" id="siteMapOrigin">
+          <img src="images/06 - Flows and Map_Images/Sitemap.png" alt="site map">
+        </a>
+        <div class="lightbox-target" id="siteMap">
+          <img src="images/06 - Flows and Map_Images/Sitemap.png" alt="site map">
+          <a class="lightbox-close" href="#siteMapOrigin"></a>
+        </div>
+        <!-- User Flows -->
+        <a class="lightbox" href="#userFlows" id="userFlowsOrigin">
+          <img src="images/06 - Flows and Map_Images/Final User Flows (Digital) copy.jpg" alt="final user flows">
+        </a>
+        <div class="lightbox-target" id="userFlows">
+          <img src="images/06 - Flows and Map_Images/Final User Flows (Digital) copy.jpg" alt="final user flows">
+          <a class="lightbox-close" href="#userFlowsOrigin"></a>
+        </div>
       </section>
     <!-- Design Stage -->
     <header class="centerGrid">Design</header>
@@ -205,10 +295,35 @@
           Users found the design simple and clean, but the functionality to be confusing. The wireframe was missing many crucial details and the Smart Organization feature seemed more annoying than helpful. I decided to abandon the Smart Organization feature and returned to the “whiteboard” hoping to create a more intuitive wireframe.
         </p>
         <!-- Images -->
-        <div class="paperSketches">
-          <img src="images/07 - Wireframes_Images/WFSketch_01.JPG" alt="paper sketch" class="paperSketch1">
-          <img src="images/07 - Wireframes_Images/WFSketch_02.JPG" alt="paper sketch" class="paperSketch2">
-          <img src="images/07 - Wireframes_Images/WFSketch_03.JPG" alt="paper sketch" class="paperSketch3">
+        <div class="paperSketches" id="paperSketches">
+
+          <!-- Paper Sketch 1 -->
+          <a class="lightbox" href="#paperSketch1">
+            <img src="images/07 - Wireframes_Images/WFSketch_01.jpg" alt="paper sketch">
+          </a>
+          <div class="lightbox-target" id="paperSketch1">
+            <img src="images/07 - Wireframes_Images/WFSketch_01.jpg" alt="paper sketch">
+            <a class="lightbox-close" href="#paperSketches"></a>
+          </div>
+
+          <!-- Paper Sketch 2 -->
+          <a class="lightbox" href="#paperSketch2">
+            <img src="images/07 - Wireframes_Images/WFSketch_02.jpg" alt="paper sketch">
+          </a>
+          <div class="lightbox-target" id="paperSketch2">
+            <img src="images/07 - Wireframes_Images/WFSketch_02.jpg" alt="paper sketch">
+            <a class="lightbox-close" href="#paperSketches"></a>
+          </div>
+
+          <!-- Paper Sketch 2 -->
+          <a class="lightbox" href="#paperSketch3">
+            <img src="images/07 - Wireframes_Images/WFSketch_03.jpg" alt="paper sketch">
+          </a>
+          <div class="lightbox-target" id="paperSketch3">
+            <img src="images/07 - Wireframes_Images/WFSketch_03.jpg" alt="paper sketch">
+            <a class="lightbox-close" href="#paperSketches"></a>
+          </div>
+
         </div>
         <div class="wireframes">
           <img src="images/07 - Wireframes_Images/WF_1.png" alt="wireframe" class="wireFrame1">
@@ -217,7 +332,7 @@
           <img src="images/07 - Wireframes_Images/WF_4.png" alt="wireframe" class="wireFrame4">
         </div>
         <!-- button -->
-        <input type="image" src="images/11 - Icons_Images/Wireframe_Button.png" class="button" id="wireButton" type="button" onclick="window.location.href = 'https://invis.io/FGNEGRTSTRJ';">
+        <input type="image" src="images/11 - Icons_Images/invision_wireframe.png" class="button" id="wireButton" type="button" onclick="window.location.href = 'https://invis.io/FGNEGRTSTRJ';">
       </section>
       <!-- Branding -->
       <section class="fullGrid">
@@ -302,23 +417,46 @@
     </footer>
       </main>
 
-    <!-- Menu Overlay -->
-    <div id="menuOverlay" class="overlay">
+      <!-- Menu Overlay -->
+      <div id="menuOverlay" class="overlay">
 
-     <!-- Button to close the overlay navigation -->
-     <a href="javascript:void(0)" class="closeMenu" onclick="closeNav()">
-       <img src="images/11 - Icons_Images/menu_open.png">
-     </a>
+       <!-- Button to close the overlay navigation -->
+       <a href="javascript:void(0)" class="closeMenu" onclick="closeNav()">
+         <img src="images/11 - Icons_Images/menu_open.png" style="width: 5rem">
+       </a>
 
-     <!-- Overlay content -->
-     <div class="overlay-content">
-       <a href="index.html">Home</a>
-       <a href="about.html">About</a>
-       <a href="work.html">Work</a>
-       <a href="mailto:m@mbenleonardo.com" id="overlayContact">Contact</a>
-     </div>
+       <!-- Overlay content -->
+       <div class="overlay-content">
+         <a href="index.html#workContainer">Work</a>
+         <a href="about.html">About</a>
+         <a class="btn" id="contact" onmouseover="selectContact()"
+         onmouseout="deselectContact()"
+         onclick="copiedConfirmation()"
+         data-clipboard-text="m@mbenleonardo.com">
+           <h1 id="click">click to copy</h1>
+           <p>m@mbenleonardo.com</p>
+         </a>
+         <p id="designTag">designed and coded by Menachem Polonsky</p>
+       </div>
 
-    </div>
+      </div>
+
+
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- Clipboard -->
+    <script src="dist/clipboard.min.js"></script>
+    <script>
+      var clipboard = new ClipboardJS('.btn');
+
+      clipboard.on('success', function(e) {
+          console.log(e);
+      });
+      clipboard.on('error', function(e) {
+          console.log(e);
+      });
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132132938-1"></script>
     <script>
