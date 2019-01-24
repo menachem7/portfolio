@@ -19,7 +19,9 @@
     <!-- Navigation Top -->
     <nav class="navTop"
       <!-- Logo -->
-      <input type="image" src="images/00 - Logo/Logo.png" class="button" id="navLogo" type="button" onclick="window.location.href = 'index.html';">
+      <a id="navLogo" href="work.html">
+          <img src="images/00 - Logo/Logo.png" class="button" id="navLogo" alt="">
+      </a>
       <!-- Menu -->
       <input type="image" src="images/11 - Icons_Images/menu_closed_white.png" class="button" id="closedMenu" type="button" onclick="openNav()">
     </nav>
@@ -27,7 +29,7 @@
     <!-- Navigation Sides -->
     <nav class="navSides">
       <!-- Work -->
-      <a href="index.html#workContainer" id="workButton">
+      <a href="work.html" id="workButton">
           <h1>Work</h1>
       </a>
       <!-- About -->
@@ -94,7 +96,7 @@
 
      <!-- Overlay content -->
      <div class="overlay-content">
-       <a href="index.html#workContainer">Work</a>
+       <a href="work.html">Work</a>
        <a href="about.html" id="active">About</a>
        <a class="btn" id="contact" onmouseover="selectContact()"
        onmouseout="deselectContact()"

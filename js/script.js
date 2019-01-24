@@ -1,3 +1,20 @@
+// Home
+
+function answer() {
+  document.getElementById("navBody").innerHTML = "Yes I am!";
+  document.getElementById("navBody").style.transition = ".5s ease";
+}
+
+function noAnswer() {
+  document.getElementById("navBody").innerHTML = "Are you ready for an adventure?";
+  document.getElementById("navBody").style.color = "#FFFFFF";
+}
+
+function enterSite() {
+  window.location.href = "work.html";
+}
+
+
 // Close Home
 
 window.onscroll = function() {
@@ -6,15 +23,13 @@ window.onscroll = function() {
 
 function scrollFunction() {
   if (document.body.scrollTop > 1 || document.body.scrollBottom > 1) {
-    document.getElementById("home").style.height = "0%";
-  }
+}
 }
 
 // Open Home
 
-function openHome() {
-  document.getElementById("home").style.height = "100%";
-}
+// function openHome() {
+// }
 
 // Close Home
 

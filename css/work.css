@@ -1,12 +1,8 @@
-/* Foundation */
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+/* Desktop Screen */
 
 html {
   font-size: 10px;
-  height  : 100%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -17,40 +13,29 @@ body {
   background: linear-gradient(47.77deg, #05070F 27.82%, #122837 56.13%, #567582 100%);
 }
 
-.aboutContainer {
-  width: 100%;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-/* Typography */
+/* Typography  */
 
 h1 {
   font-family: interstate, sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   color: #FFFFFF;
 }
 
 p {
+  cursor: pointer;
+  text-decoration: none;
   font-family: montserrat, sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-style: normal;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   color: #FFFFFF;
-  letter-spacing: 1%;
-  line-height: 140%;
-}
-
-strong {
-  font-weight: 600;
-}
-
-i {
-  font-style: italic;
-}
-
-img {
-  max-width: 100%;
+  letter-spacing: 1;
 }
 
 /* Navigation */
@@ -104,9 +89,9 @@ nav.navSides {
   padding: 5rem 2rem;
   margin-left: 2rem;
   /* Active */
-  /* border-left: solid thin #6AEBF7;  */
+  border-left: solid thin #6AEBF7;
   /* Inactive */
-  border-left: solid thin #567582;
+  /* border-left: solid thin #567582;  */
 }
 
 #workButton h1:hover {
@@ -122,64 +107,137 @@ nav.navSides {
   padding: 5rem 2rem;
   margin-right: 2rem;
   /* Active */
-  border-right: solid thin #6AEBF7;
+  /* border-right: solid thin #6AEBF7; */
   /* Inactive */
-  /* border-right: solid thin #567582; */
+  border-right: solid thin #567582;
 }
 
 #aboutButton h1:hover {
   border-right: solid thin #6AEBF7;
 }
 
-/* About */
+/* Work Screen */
 
-.aboutSection {
+.workContainer {
+  position: absolute;
   width: 100%;
-  padding: 15rem 0;
+  padding: 13rem 0 7rem 0;
+  background: linear-gradient(47.77deg, #05070F 27.82%, #122837 56.13%, #567582 100%);
+}
+
+/* Typography */
+
+.workContainer h1 {
+  font-family: interstate, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.4rem;
+  color: #FFFFFF;
+}
+
+.workContainer p {
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.8rem;
+  color: #FFFFFF;
+}
+
+.workContainer .casestudyScroller > p {
+  font-size: 2.4rem;
+}
+
+.workContainer img {
+  max-width: 100%;
+}
+
+
+/* Case Study Section and Side Menus */
+
+.casestudies {
+  width: 100%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr 1fr;
-  grid-template-areas:
-  ". Portrait Portrait ."
-  ". Essay Buttons .";
-  grid-row-gap: 5rem;
-  grid-column-gap: 2rem;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-gap: 2%;
+  grid-row-gap: 0rem;
   align-items: center;
 }
 
-#selfPortrait {
-  grid-area: Portrait;
-  max-width: 100%;
-  justify-self: center;
-}
+/* Case Study */
 
-#essay {
-  grid-area: Essay;
-}
-
-.aboutButtons {
-  grid-area: Buttons;
-  align-self: start;
+.casestudy {
+  grid-column: 2/3;
   display: grid;
-  grid-gap: 2.4rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-gap: 2.5rem;
 }
 
-/* Buttons */
+.casestudyImage {
+  grid-column: span 2;
+}
 
-.aboutButton {
+.casestudy a {
   text-decoration: none;
-  text-align: center;
   justify-self: end;
-  width: 13.2rem;
 }
 
-.aboutButton p {
+#casestudyButton p {
   padding-bottom: .7rem;
   border-bottom: solid thin #567582;
 }
 
-.aboutButton p:hover {
+#casestudyButton p:hover {
   padding-bottom: .7rem;
   border-bottom: solid thin #6AEBF7;
+}
+
+/* Case Study Scroller */
+
+.casestudyScroller {
+  display: none;
+  /* display: grid; */
+  /* position: fixed; */
+  top: 30%;
+  grid-template-rows: auto;
+  justify-items: center;
+  grid-row-gap: 4rem;
+}
+
+.mobileScroll {
+  display: none;
+  justify-self: center;
+}
+
+/* Buttons */
+
+#scrollUp, #scrollDown {
+  max-width: 6rem;
+  min-width: 4rem;
+}
+
+#mobile_scroll_left {
+  grid-column: 2/3;
+  max-width: 6rem;
+  min-width: 4rem;
+  transform: rotate(-90deg);
+}
+
+#mobile_scroll_right {
+  grid-row: 1/2;
+  grid-column: 4/5;
+  max-width: 6rem;
+  min-width: 4rem;
+  transform: rotate(90deg);
+  /* justify-self: end; */
+}
+
+/* Hide */
+
+.mobileContainer {
+  display: none;
 }
 
 /* Menu Overlay (background) */
@@ -221,7 +279,7 @@ nav.navSides {
 /* When you mouse over the navigation links, change their color */
 
 .overlay-content a {
-  width: 22%;
+  width: 30%;
   margin: auto;
   margin-bottom: 5rem;
 }
@@ -275,6 +333,7 @@ nav.navSides {
   letter-spacing: 1;
   color: #567582;
   transition: .2s;
+  text-align: center;
 }
 
 #contact p {
@@ -291,11 +350,31 @@ nav.navSides {
   font-size: 1.4rem;
 }
 
+
+/* Mobile */
+
+.mobile_workHeading {
+  display: none;
+}
+
 /* Screens */
+
+/* Tablet Screen */
 
 @media screen and (max-width: 950px) {
   html {
     font-size: 8px;
+    background: linear-gradient(47.77deg, #05070F 27.82%, #122837 56.13%, #567582 100%);
+  }
+
+  /* General */
+
+  body, nav, .workContainer {
+    min-width: 300px;
+  }
+
+  .workContainer {
+    height: 100%;
   }
 
   /* Navigation Sides */
@@ -303,81 +382,66 @@ nav.navSides {
   nav.navSides {
     display: none;
   }
-}
 
-@media screen and (max-width: 800px) {
+  /* Case Study */
 
-  /* Menu Button */
-
-  #closedMenu {
-    margin-right: 2rem;
+  .casestudies {
+    grid-template-columns: 1fr 8fr 1fr;
   }
 
-  /* Navigation Sides */
-  nav.navSides {
+  .casestudyScroller {
     display: none;
   }
 
-  /* About Me Section */
-  .aboutSection {
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-areas:
-    ". Portrait ."
-    ". Buttons ."
-    ". Essay .";
-    grid-row-gap: 3rem;
-    grid-column-gap: 2rem;
-    align-items: center;
-    justify-items: center;
-  }
-
-  .aboutSection > * {
-    grid-column: 2/3;
-  }
-
-  #selfPortrait {
-    grid-area: Portrait;
-    max-width: 100%;
-    justify-self: center;
-  }
-
-  #essay {
-    grid-area: Essay;
-  }
-
-  .aboutButtons {
-    grid-area: Buttons;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2.4rem;
-  }
-
-  .aboutButton {
-    justify-self: center;
+  /* Menu Overlay */
+  .overlay-content a {
+    width: 40%;
   }
 }
+
+/* Mobile Screen */
 
 @media screen and (max-width: 600px) {
   html {
     font-size: 7px;
   }
 
-  .aboutSection {
-    grid-template-columns: 1fr 80% 1fr;
+  /* Hide */
+
+  .casestudyScroller, nav.navSides {
+    display: none;
   }
 
-  .aboutButtons {
-    grid-area: Buttons;
-    grid-column: 2/3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2.4rem;
+  /* Case Studies; */
+
+  .casestudies {
+    grid-template-columns: 1fr 95% 1fr;
+  }
+
+  /* Work */
+
+  .mobile_workHeading {
+    display: block;
+  }
+
+
+  .mobile_workHeading > h1 {
+      padding: 6rem 0;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 3.2rem;
+  }
+
+  .casestudies {
+    grid-row-gap: 8rem;
+    width: 80%;
+    margin: 0 auto;
   }
 
   /* overlay menu */
   .overlay-content a {
-    font-size: 3.2rem;
-    width: 30%;
+    font-size: 4.2rem;
+    width: 60%;
     margin: auto;
     margin-bottom: 5rem;
   }
