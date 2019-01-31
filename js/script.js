@@ -2,7 +2,6 @@
 
 function answer() {
   document.getElementById("navBody").innerHTML = "Yes I am!";
-  document.getElementById("navBody").style.transition = ".1s ease";
 }
 
 function noAnswer() {
