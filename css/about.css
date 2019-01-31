@@ -351,6 +351,8 @@ nav.navSides {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2.4rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 
   .aboutButton {
