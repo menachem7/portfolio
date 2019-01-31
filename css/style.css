@@ -51,6 +51,7 @@ h2 {
   font-size: 3.6rem;
   color: #000000;
   margin-top: 5rem;
+  line-height: 120%;
 }
 
 p {
@@ -125,6 +126,7 @@ nav.navTop {
   grid-column: 3/4;
   height: 2.3rem;
   justify-self: end;
+  border-radius: 0;
   /* margin-right: 5rem; */
 }
 
@@ -140,10 +142,14 @@ nav.navTop {
 
 .casestudyHero > * {
   grid-column: 2/3;
+  opacity: .8;
 }
 
 #headerLogo {
-  grid-column: 2/3;
+  grid-column: 2/3;-ms-align-self: auto;
+  align-self: auto;-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 100%;
   margin: 0 auto;
   max-width: 9rem;
@@ -164,6 +170,7 @@ nav.navTop {
 #projectImage {
   margin-top: 0;
   max-width: 60rem;
+  opacity: 1;
 }
 
 /* Case Study */
@@ -714,6 +721,14 @@ top: 3rem;
     font-size: 8px;
   }
 
+  /* Menu Button */
+
+  #closedMenu {
+    margin-right: 3rem;
+  }
+
+  /* Case Study */
+
   .casestudy {
     margin: 0 4% 4% 4%;
     display: grid;
@@ -869,12 +884,16 @@ top: 3rem;
   /* overlay menu */
   .overlay-content a {
     font-size: 3.2rem;
-    width: 30%;
+    width: 80%;
     margin: auto;
     margin-bottom: 5rem;
   }
 
   .overlay #overlayContact {
     font-size: 2.4rem;
+  }
+
+  .overlay .closeMenu {
+    right: 3rem;
   }
 }

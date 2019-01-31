@@ -42,7 +42,7 @@ body {
   font-style: normal;
   font-size: 3.2rem;
   color: #FFFFFF;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 p {
@@ -73,6 +73,8 @@ p {
   html {
     font-size: 8px;
   }
+
+
 }
 
 /* Mobile Screen */
