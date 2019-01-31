@@ -4,6 +4,8 @@ html {
   font-size: 10px;
   box-sizing: border-box;
   background: linear-gradient(90deg, #05070F 0%, #122837 48.62%, #567582 100%);
+  height: 100%;
+  overflow: hidden;
 }
 
 *, *:before, *:after {
@@ -16,6 +18,8 @@ body {
   font-style: normal;
   font-size: 1.8rem;
   color: #636363;
+  height: 100%;
+  overflow: auto;
 }
 
 header {
@@ -317,8 +321,7 @@ nav.navTop {
   grid-column-gap: 3.5rem;
 }
 
-.paperSketches > img, .wireframes > img {
-  margin-top: 3.5rem;
+.paperSketches > a > img, .wireframes > img {
   margin-bottom: 0;
 }
 
@@ -565,55 +568,9 @@ transition: .5s ease-in-out;
 
 a.lightbox-close {
 display: block;
-width: 5rem;
-height: 5rem;
-box-sizing: border-box;
-background: white;
-color: #567582;
-text-decoration: none;
+width: 100%;
+height: 100%;
 position: absolute;
-top: 3rem;
-right: 5rem;
--webkit-transition: .5s ease-in-out;
--moz-transition: .5s ease-in-out;
--o-transition: .5s ease-in-out;
-transition: .5s ease-in-out;
-}
-
-/* Provides part of the "X" to eliminate an image from the close link */
-
-a.lightbox-close:before {
-content: "";
-display: block;
-height: 30px;
-width: 1px;
-background: black;
-color: #567582;
-position: absolute;
-left: 26px;
-top:10px;
--webkit-transform:rotate(45deg);
--moz-transform:rotate(45deg);
--o-transform:rotate(45deg);
-transform:rotate(45deg);
-}
-
-/* Provides part of the "X" to eliminate an image from the close link */
-
-a.lightbox-close:after {
-content: "";
-display: block;
-height: 30px;
-width: 1px;
-background: black;
-color: #567582;
-position: absolute;
-left: 26px;
-top:10px;
--webkit-transform:rotate(-45deg);
--moz-transform:rotate(-45deg);
--o-transform:rotate(-45deg);
-transform:rotate(-45deg);
 }
 
 /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
@@ -727,6 +684,12 @@ top: 3rem;
     margin-right: 3rem;
   }
 
+  /* Lightbox */
+
+  .lightbox-target img {
+    width: 90%;
+  }
+
   /* Case Study */
 
   .casestudy {
@@ -790,6 +753,11 @@ top: 3rem;
     margin-top: 3rem;
     float: left;
   }
+
+  /* Menu Overlay */
+  .overlay-content a {
+    width: 40%;
+  }
 }
 
 /* Media Screen for Mobile */
@@ -798,6 +766,20 @@ top: 3rem;
 
   html {
     font-size: 7px;
+  }
+
+  p {
+    font-weight: 400;
+  }
+
+  h1#projectInfo {
+    line-height: 1.4;
+  }
+
+  /* Menu */
+
+  #closedMenu {
+    margin-right: 0rem;
   }
 
   .casestudyHero {
@@ -821,15 +803,21 @@ top: 3rem;
     grid-template-columns: 1fr 70% 1fr;
   }
 
+  /* Lightbox */
+
+  .lightbox-target img {
+    width: 90%;
+  }
+
   /* Previous and Next Buttons */
   .prev, .next {
-    margin-left: -9rem;
+    padding-left: 4rem;
     font-size: 4rem;
   }
 
   /* Position the "next button" to the right */
   .next {
-    margin-right: -9rem;
+    margin-right: -8rem;
   }
 
   /* Navigation Menu */
@@ -847,6 +835,78 @@ top: 3rem;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5rem;
   }
+
+  /* Wireframes and Usability Test */
+
+  .paperSketches {
+    /* display: grid; */
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+  .wireframes {
+    /* display: grid; */
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    /* grid-column-gap: 3.5rem; */
+  }
+
+  .paperSketches > a > img {
+    margin-bottom: 0;
+  }
+
+  .wireframes > img {
+    margin: 2rem 0;
+  }
+
+  /* Branding */
+
+  .brandingDetails {
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+  }
+
+  #brandingLogo {
+    width: 100%;
+  }
+
+  /* Hi-Fi Mockup and Preference Tests */
+
+  .prefTest {
+    display: grid;
+    margin: 0 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto 1fr auto;
+    grid-template-areas:
+    "image1"
+    "icon1"
+    "image2"
+    "icon2";
+  }
+
+  #prefHome1, #prefShare1 {
+    grid-area: image1;
+  }
+
+  #prefHome2, #prefShare2 {
+    grid-area: image2;
+  }
+
+  #prefIcon1, #shareIcon1 {
+    grid-area: icon1;
+  }
+
+  #prefIcon2, #shareIcon2 {
+    grid-area: icon2;
+  }
+
+  quote {
+    margin: 5rem 0;
+    font-weight: 500;
+  }
+
 
   /* Images */
 
@@ -883,7 +943,7 @@ top: 3rem;
 
   /* overlay menu */
   .overlay-content a {
-    font-size: 3.2rem;
+    font-size: 4.2rem;
     width: 80%;
     margin: auto;
     margin-bottom: 5rem;

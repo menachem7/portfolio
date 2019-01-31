@@ -1,8 +1,8 @@
-// Home
+// Home Screen
 
 function answer() {
   document.getElementById("navBody").innerHTML = "Yes I am!";
-  document.getElementById("navBody").style.transition = ".5s ease";
+  document.getElementById("navBody").style.transition = ".1s ease";
 }
 
 function noAnswer() {
@@ -12,29 +12,6 @@ function noAnswer() {
 
 function enterSite() {
   window.location.href = "work.html";
-}
-
-
-// Close Home
-
-window.onscroll = function() {
-  scrollFunction()
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 1 || document.body.scrollBottom > 1) {
-}
-}
-
-// Open Home
-
-// function openHome() {
-// }
-
-// Close Home
-
-function closeHome() {
-  document.getElementById("home").style.height = "0%";
 }
 
 // Menu Overlay
@@ -50,7 +27,7 @@ function closeNav() {
   document.getElementById("click").innerHTML = "click to copy";
 }
 
-// Select Contact
+// Select and Copy Contact
 
 function selectContact() {
   document.getElementById("click").style.color = "#6AEBF7";
@@ -59,8 +36,6 @@ function selectContact() {
 function deselectContact() {
   document.getElementById("click").style.color = "#567582";
 }
-
-// Copy Contact
 
 function copiedConfirmation() {
   document.getElementById("click").innerHTML = "copied!";

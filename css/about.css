@@ -358,6 +358,11 @@ nav.navSides {
   .aboutButton {
     justify-self: center;
   }
+
+  /* Menu Overlay */
+  .overlay-content a {
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -380,7 +385,7 @@ nav.navSides {
 
   /* overlay menu */
   .overlay-content a {
-    font-size: 3.2rem;
+    font-size: 4.2rem;
     width: 80%;
     margin: auto;
     margin-bottom: 5rem;
