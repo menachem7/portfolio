@@ -93,3 +93,7 @@ p {
   html {
     font-size: 6px;
   }
+  p {
+    font-size: 2.6rem;
+  }
+}
