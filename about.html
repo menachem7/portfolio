@@ -7,8 +7,6 @@
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/about.css">
-    <!-- Javascript -->
-    <script type="text/javascript" src="js/script.js"></script>
     <!-- Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
     <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
@@ -44,8 +42,30 @@
       <!-- About Me Section -->
       <section class="aboutSection">
 
-        <!-- About Me Image -->
-        <img id="selfPortrait" src="images/13 - About/self-portrait.png">
+        <!-- Portrait Image Slideshow -->
+        <div class="portraits-container" id="selfPortrait">
+
+          <!-- Portrait 1 -->
+          <div class="myPortrait fade">
+            <img src="images/13 - About/profile_1.png">
+          </div>
+
+          <!-- Portrait 2 -->
+          <div class="myPortrait fade">
+            <img src="images/13 - About/profile_2.png">
+          </div>
+
+          <!-- Portrait 3 -->
+          <div class="myPortrait fade">
+            <img src="images/13 - About/profile_3.png">
+          </div>
+
+          <!-- Portrait 4 -->
+          <div class="myPortrait fade">
+            <img src="images/13 - About/profile_4.png">
+          </div>
+
+        </div>
 
         <!-- About Me Essay -->
         <p id="essay">
@@ -107,7 +127,25 @@
 
     </div>
 
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- Portrait Image Slideshow -->
+    <script>
+    var slideIndex = 0;
+    showSlides();
 
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("myPortrait");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
+    </script>
     <!-- Include Clipboard -->
     <script src="dist/clipboard.min.js"></script>
     <!-- 3. Instantiate clipboard by passing a string selector -->

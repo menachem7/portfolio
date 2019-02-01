@@ -389,10 +389,8 @@ nav.navTop {
 }
 
 #protoButton {
-  width: 20%;
-  margin: 0 auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  width: 15rem;
+  margin: 3rem auto;
 }
 
 #userButton {
@@ -731,11 +729,6 @@ top: 3rem;
   }
 
   /* Buttons */
-  #protoButton {
-    width: 20%;
-    margin: auto;
-    margin-top: 3rem;
-  }
 
   #userButton {
     width: 25%;
@@ -919,9 +912,8 @@ top: 3rem;
 
   /* Buttons */
   #protoButton {
-    width: 30%;
-    margin: auto;
-    margin-top: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
   }
 
   #userButton {

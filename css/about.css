@@ -147,11 +147,43 @@ nav.navSides {
   align-items: center;
 }
 
+/* Portrait Image Slideshow */
+
+/* Slideshow container */
+.portraits-container {
+  max-width: 100%;
+  position: relative;
+}
+
+/* Hide the images by default */
+.myPortrait {
+  display: none;
+}
+
 #selfPortrait {
   grid-area: Portrait;
-  max-width: 100%;
   justify-self: center;
 }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* About Section Continued */
 
 #essay {
   grid-area: Essay;

@@ -1,14 +1,5 @@
 // Home Screen
 
-// function answer() {
-//   document.getElementById("navBody").innerHTML = "Yes I am!";
-// }
-//
-// function noAnswer() {
-//   document.getElementById("navBody").innerHTML = "Are you ready for  adventure?";
-//   document.getElementById("navBody").style.color = "#FFFFFF";
-// }
-
 function enterSite() {
   window.location.href = "work.html";
 }
