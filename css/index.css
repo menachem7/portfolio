@@ -1,5 +1,9 @@
 /* Desktop Screen */
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 html {
   font-size: 10px;
   height: 100%;
@@ -11,10 +15,8 @@ body {
   overflow: auto;
   box-sizing: border-box;
   background: linear-gradient(47.77deg, #05070F 27.82%, #122837 56.13%, #567582 100%);
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
+  opacity: 1;
+  transition: 1s opacity;
 }
 
 /* Home  */
@@ -55,10 +57,20 @@ p {
   letter-spacing: 1;
 }
 
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 #navBody {
   cursor: pointer;
   padding-bottom: .7rem;
   border-bottom: solid thin #567582;
+  animation: .9s ease-out 0s 1 slideInFromBottom;
 }
 
 #navBody:hover {
