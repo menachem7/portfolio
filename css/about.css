@@ -8,6 +8,8 @@ html {
   font-size: 10px;
   height  : 100%;
   overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -31,7 +33,7 @@ h1 {
   color: #FFFFFF;
 }
 
-p {
+p, a {
   font-family: montserrat, sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -192,6 +194,7 @@ nav.navSides {
 .aboutButtons {
   grid-area: Buttons;
   align-self: start;
+  justify-self: end;
   display: grid;
   grid-gap: 2.4rem;
 }
@@ -201,18 +204,17 @@ nav.navSides {
 .aboutButton {
   text-decoration: none;
   text-align: center;
-  justify-self: end;
   width: 13.2rem;
 }
 
-.aboutButton p {
+.aboutButton {
   padding-bottom: .7rem;
   border-bottom: solid thin #567582;
 }
 
-.aboutButton p:hover {
-  padding-bottom: .7rem;
+.aboutButton:hover {
   border-bottom: solid thin #6AEBF7;
+  transition: .1s ease;
 }
 
 /* Menu Overlay (background) */

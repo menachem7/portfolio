@@ -1,75 +1,52 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/work.css">
-  <!-- Javascript -->
-  <script type="text/javascript" src="js/script.js"></script>
-  <!-- Adobe Fonts -->
-  <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
-  <link rel="stylesheet" href="https://use.typekit.net/ddw1ntc.css">
-  <title>Menachem Polonsky</title>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible"><!-- CSS Stylesheet -->
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/work.css" rel="stylesheet"><!-- Javascript -->
+
+	<script src="js/script.js" type="text/javascript">
+	</script><!-- Adobe Fonts -->
+	<link href="https://use.typekit.net/ddw1ntc.css" rel="stylesheet">
+	<link href="https://use.typekit.net/ddw1ntc.css" rel="stylesheet">
+	<title>Menachem Polonsky</title>
 </head>
-  <body>
-    <!-- Navigation Top -->
-    <nav class="navTop">
-      <!-- Logo -->
-      <a id="navLogo" href="work.html">
-          <img src="images/00 - Logo/Logo.png" class="button" id="navLogo" alt="">
-      </a>
-      <!-- Menu -->
-      <input type="image" src="images/11 - Icons_Images/menu_closed_white.png" class="button" id="closedMenu" onclick="openNav()">
-    </nav>
-
-    <!-- Navigation Sides -->
-    <nav class="navSides">
-      <!-- Work -->
-      <a href="work.html" id="workButton">
-          <h1>Work</h1>
-      </a>
-      <!-- About -->
-      <a href="about.html" id="aboutButton" >
-        <h1>About</h1>
-      </a>
-    </nav>
-
-
-    <!-- Work -->
-    <section id="workContainer" class="workContainer">
-
-      <!-- Case Studies -->
-      <main class="casestudies">
-
-        <!-- Case Study Scroller -->
-        <div class="casestudyScroller">
-          <p>1</p>
-          <p>2</p>
-          <input type="image" src="images/11 - Icons_Images/ArrowUp.png" id="scrollUp" type="button" onclick="window.location.href = 'https://www.google.com';">
-          <p>3</p>
-          <input type="image" src="images/11 - Icons_Images/ArrowDown.png" id="scrollDown" type="button" onclick="window.location.href = 'https://www.google.com';">
-          <p>4</p>
-          <p>5</p>
-        </div>
-
-        <!-- Workspace: Case Study -->
-        <article class="casestudy">
-          <img class="casestudyImage" src="images/01 - Header_Images/Header_Workspace.png">
-          <div class="casestudyTitle">
-            <h1>Workspace</h1>
-            <br>
-            <p>UX / UI Design</p>
-          </div>
-          <a id="casestudyButton" href="project.html">
-            <p>case study</p>
-          </a>
-        </article>
-
-
-        <!-- Workspace: Case Study -->
-        <!-- <article class="casestudy">
+<body>
+	<!-- Navigation Top -->
+	<nav class="navTop">
+		<!-- Logo -->
+		 <a href="work.html" id="navLogo"><img alt="" class="button" id="navLogo" src="images/00%20-%20Logo/Logo.png"></a> <!-- Menu -->
+		 <input class="button" id="closedMenu" onclick="openNav()" src="images/11%20-%20Icons_Images/menu_closed_white.png" type="image">
+	</nav><!-- Navigation Sides -->
+	<nav class="navSides">
+		<!-- Work -->
+		 <a href="work.html" id="workButton">
+		<h1>Work</h1></a> <!-- About -->
+		 <a href="about.html" id="aboutButton">
+		<h1>About</h1></a>
+	</nav><!-- Work -->
+	<section class="workContainer" id="workContainer">
+		<!-- Case Studies -->
+		<main class="casestudies">
+			<!-- Case Study Scroller -->
+			<div class="casestudyScroller">
+				<p>1</p>
+				<p>2</p><input id="scrollUp" onclick="window.location.href = 'https://www.google.com';" src="images/11%20-%20Icons_Images/ArrowUp.png" type="button">
+				<p>3</p><input id="scrollDown" onclick="window.location.href = 'https://www.google.com';" src="images/11%20-%20Icons_Images/ArrowDown.png" type="button">
+				<p>4</p>
+				<p>5</p>
+			</div><!-- Workspace: Case Study -->
+			<article class="casestudy">
+				<img class="casestudyImage" src="images/01%20-%20Header_Images/Header_Workspace.png">
+				<div class="casestudyTitle">
+					<h1>Workspace</h1><br>
+					<p>UX / UI Design</p>
+				</div><a href="project.html" id="casestudyButton">
+				<p>case study</p></a>
+			</article><!-- Workspace: Case Study -->
+			<!-- <article class="casestudy">
           <img class="casestudyImage" src="images/12 - Next Project_Images/Craigslist_Project.jpg">
           <div class="casestudyInfo">
             <h1>Craigslist</h1>
@@ -80,57 +57,40 @@
             <p>case study</p>
           </a>
         </article> -->
+		</main>
+	</section><!-- Menu Overlay -->
+	<div class="overlay" id="menuOverlay">
+		<!-- Button to close the overlay navigation -->
+		 <a class="closeMenu" href="javascript:void(0)" onclick="closeNav()"><img src="images/11%20-%20Icons_Images/menu_open.png" style="width: 5rem"></a> <!-- Overlay content -->
+		<div class="overlay-content">
+			<a href="#workContainer" id="active" onclick="closeNav()">Work</a> <a href="about.html">About</a> <a class="btn" data-clipboard-text="m@mbenleonardo.com" id="contact" onclick="copiedConfirmation()" onmouseout="deselectContact()" onmouseover="selectContact()">
+			<h1 id="click">click to copy</h1>
+			<p>m@mbenleonardo.com</p></a>
+			<p id="designTag">designed and coded by Menachem Polonsky</p>
+		</div>
+	</div><!-- Include Clipboard -->
+	<script src="dist/clipboard.min.js">
+	</script> <!-- 3. Instantiate clipboard by passing a string selector -->
 
-      </main>
+	<script>
+	     var clipboard = new ClipboardJS('.btn');
 
-    </section>
+	     clipboard.on('success', function(e) {
+	         console.log(e);
+	     });
+	     clipboard.on('error', function(e) {
+	         console.log(e);
+	     });
+	</script> <!-- Global site tag (gtag.js) - Google Analytics -->
 
-    <!-- Menu Overlay -->
-    <div id="menuOverlay" class="overlay">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132132938-1">
+	</script>
+	<script>
+	     window.dataLayer = window.dataLayer || [];
+	     function gtag(){dataLayer.push(arguments);}
+	     gtag('js', new Date());
 
-     <!-- Button to close the overlay navigation -->
-     <a href="javascript:void(0)" class="closeMenu" onclick="closeNav()">
-       <img src="images/11 - Icons_Images/menu_open.png" style="width: 5rem">
-     </a>
-
-     <!-- Overlay content -->
-     <div class="overlay-content">
-       <a href="#workContainer" onclick="closeNav()" id="active">Work</a>
-       <a href="about.html">About</a>
-       <a class="btn" id="contact" onmouseover="selectContact()"
-       onmouseout="deselectContact()"
-       onclick="copiedConfirmation()"
-       data-clipboard-text="m@mbenleonardo.com">
-         <h1 id="click">click to copy</h1>
-         <p>m@mbenleonardo.com</p>
-       </a>
-       <p id="designTag">designed and coded by Menachem Polonsky</p>
-     </div>
-
-    </div>
-
-    <!-- Include Clipboard -->
-    <script src="dist/clipboard.min.js"></script>
-    <!-- 3. Instantiate clipboard by passing a string selector -->
-    <script>
-      var clipboard = new ClipboardJS('.btn');
-
-      clipboard.on('success', function(e) {
-          console.log(e);
-      });
-      clipboard.on('error', function(e) {
-          console.log(e);
-      });
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132132938-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-132132938-1');
-    </script>
-
-  </body>
+	     gtag('config', 'UA-132132938-1');
+	</script>
+</body>
 </html>
