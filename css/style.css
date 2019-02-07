@@ -173,10 +173,20 @@ nav.navTop {
   margin-bottom: 5rem;
 }
 
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 #projectImage {
   margin-top: 0;
   max-width: 60rem;
   opacity: 1;
+  animation: 1.2s ease-out 0s 1 slideInFromBottom;
 }
 
 /* Case Study */
@@ -239,6 +249,7 @@ nav.navTop {
   grid-template-columns: auto 1fr;
   grid-row-gap: 1rem;
   align-items: center;
+  margin-bottom: 3rem;
 }
 
 .listNumber {

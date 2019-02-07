@@ -44,7 +44,7 @@ p, a {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 i {
@@ -89,16 +89,11 @@ nav.navTop {
 /* Navigation Sides */
 
 nav.navSides {
-  position: fixed;
-  width: 100%;
   top: 42%;
-  left: 0;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  position: fixed;
 }
 
-.navSides a {
+#workButton {
   text-decoration: none;
 }
 
@@ -117,7 +112,10 @@ nav.navSides {
 }
 
 #aboutButton {
-  justify-self: end;
+  position: fixed;
+  top: 42%;
+  right: 0;
+  text-decoration: none;
 }
 
 #aboutButton h1 {

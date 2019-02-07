@@ -38,6 +38,10 @@ p {
   letter-spacing: 1;
 }
 
+strong {
+  font-weight: 500;
+}
+
 /* Navigation */
 
 /* Navigation Top */
@@ -72,16 +76,12 @@ nav.navTop {
 /* Navigation Sides */
 
 nav.navSides {
-  position: fixed;
-  width: 100%;
   top: 42%;
-  left: 0;
+  position: fixed;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
-.navSides a {
+#workButton, #aboutButton {
   text-decoration: none;
 }
 
@@ -100,7 +100,9 @@ nav.navSides {
 }
 
 #aboutButton {
-  justify-self: end;
+  position: fixed;
+  top: 42%;
+  right: 0;
 }
 
 #aboutButton h1 {
@@ -168,6 +170,24 @@ nav.navSides {
   align-items: center;
 }
 
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 /* Case Study */
 
 .casestudy {
@@ -182,14 +202,29 @@ nav.navSides {
   grid-column: span 2;
 }
 
+.casestudyImage:hover {
+  opacity: .8;
+  transition: .7s ease;
+}
+
 .casestudy a {
   text-decoration: none;
   justify-self: end;
 }
 
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 #casestudyButton p {
   padding-bottom: .7rem;
   border-bottom: solid thin #567582;
+  animation: .5s ease-out 0s 1 slideInFromBottom;
 }
 
 #casestudyButton p:hover {
