@@ -4,6 +4,8 @@ html {
   font-size: 10px;
   height: 100%;
   overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -36,6 +38,10 @@ p {
   font-size: 2.2rem;
   color: #FFFFFF;
   letter-spacing: 1;
+}
+
+.casestudyInfo > p {
+  line-height: 1.4;
 }
 
 strong {
@@ -83,6 +89,7 @@ nav.navSides {
 
 #workButton, #aboutButton {
   text-decoration: none;
+  cursor: pointer;
 }
 
 #workButton h1 {
@@ -121,14 +128,14 @@ nav.navSides {
 
 /* Work Screen */
 
-.workContainer {
+/* .workContainer {
   position: absolute;
   height: 100%;
   width: 100%;
   background: linear-gradient(47.77deg, #05070F 27.82%, #122837 56.13%, #567582 100%);
   display: grid;
   grid-template-rows: repeat(3,1fr);
-}
+} */
 
 /* Typography */
 
@@ -161,12 +168,12 @@ nav.navSides {
 
 .casestudies {
   grid-row: 2/3;
-  padding-top: 10rem;
+  padding: 13rem 0;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr auto;
   grid-gap: 2%;
-  grid-row-gap: 0rem;
+  grid-row-gap: 13rem;
   align-items: center;
 }
 
@@ -221,16 +228,18 @@ nav.navSides {
   }
 }
 
-#casestudyButton p {
+.casestudyButton p {
   padding-bottom: .7rem;
   border-bottom: solid thin #567582;
   animation: .5s ease-out 0s 1 slideInFromBottom;
 }
 
-#casestudyButton p:hover {
+#casestudyButton_active p:hover {
   padding-bottom: .7rem;
   border-bottom: solid thin #6AEBF7;
 }
+
+
 
 /* Case Study Scroller */
 
