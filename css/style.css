@@ -30,19 +30,21 @@ header {
   font-style: normal;
   font-size: 1.6rem;
   text-transform: uppercase;
-  letter-spacing: 1.6rem;
+  letter-spacing: 2rem;
   text-align: center;
   margin: 20rem 0 7rem 0;
   color: #000000;
+  line-height: 140%;
 }
 
 h1 {
   font-family: interstate, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   font-size: 2.4rem;
   text-align: center;
   color: #000000;
+  letter-spacing: .1rem;
 }
 
 .border h1 {
@@ -155,6 +157,10 @@ nav.navTop {
 .casestudyHero > * {
   grid-column: 2/3;
   opacity: .8;
+}
+
+#designSelfHero > header {
+  margin-top: 13rem !important;
 }
 
 #headerLogo {
@@ -333,6 +339,12 @@ nav.navTop {
   grid-gap: 3.5rem;
 }
 
+.inspoWireframes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 3.5rem;
+}
+
 .wireframes {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -340,9 +352,11 @@ nav.navTop {
   grid-column-gap: 3.5rem;
 }
 
-.paperSketches > a > img, .wireframes > img {
+.paperSketches > a > img, .inspoWireframes > a > img, .wireframes > img, #digitalWireframes, #moodboard {
   margin-bottom: 0;
 }
+
+
 
 /* Branding */
 
