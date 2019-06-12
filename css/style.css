@@ -866,7 +866,7 @@ top: 3rem;
 
   .paperSketches {
     /* display: grid; */
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(1fr, 1fr);
     grid-template-columns: 1fr;
     grid-gap: 1rem;
   }
@@ -879,8 +879,17 @@ top: 3rem;
     /* grid-column-gap: 3.5rem; */
   }
 
+  .inspoWireframes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3.5rem;
+  }
+
   .paperSketches > a > img {
     margin-bottom: 0;
+  }
+
+  #devLogos {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .wireframes > img {
@@ -927,6 +936,47 @@ top: 3rem;
   #prefIcon2, #shareIcon2 {
     grid-area: icon2;
   }
+
+  /* Iterations */
+
+  #prefIterations {
+    display: grid;
+    margin: 0 5rem;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: ; */
+    grid-template-areas:
+    "work1"
+    "work2"
+    "work3"
+    "case1"
+    "case2"
+    "case3";
+  }
+
+  #work1 {
+    grid-area: work1;
+  }
+
+  #work2 {
+    grid-area: work2;
+  }
+
+  #work3 {
+    grid-area: work3;
+  }
+
+  #case1 {
+    grid-area: case1;
+  }
+
+  #case2 {
+    grid-area: case2;
+  }
+
+  #case3 {
+    grid-area: case3;
+  }
+
 
   quote {
     margin: 5rem 0;
